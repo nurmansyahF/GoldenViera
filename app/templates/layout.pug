@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    block head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      meta(name="description" content="")
+      meta(name="author" content="Nurmansyah")
+      meta(name="theme-color" content="")
+
+      title Golden Viera
+
+      link(rel="shortcut icon" href="favicon.ico")
+      link(rel="stylesheet" href="styles/plugins.css")
+      link(rel="stylesheet" href="styles/main.css")
+
+  block vars
+
+  body
+    #wrap
+      block header
+        include header.pug
+
+      main
+        block content
+
+      block footer
+        include footer.pug
+
+    block modal
+
+    block script
+      script(src="plugins/jquery-3.4.1.min.js")
+      script(src="plugins/bootstrap/bootstrap.bundle.min.js")
+      script(src="plugins/owl-carousel/owl.carousel.min.js")
+      script(src="plugins/bootstrap-select/bootstrap-select.min.js")
+      script(src="scripts/main.js")
+
+    block addscript
