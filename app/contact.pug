@@ -1,0 +1,61 @@
+extends templates/layout.pug
+
+block content
+  .contact
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 Contact
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Contact
+    .contact-wrapper
+      .container
+        .row
+          .col-md-4
+            .item-contact
+              .icon
+              h4 PHONE
+              p
+                b Toll-Free
+                a(href="tel:0312345869") 031-234-5869
+              p
+                b Fax
+                a(href="tel:0312345869") 031-234-5869
+          .col-md-4
+            .item-contact
+              .icon
+              h4 EMAIL
+              p
+                b email
+                a(href="mailto:cs@email.com") cs@email.com
+              p
+                b Fax
+                a(href="mailto:support@email.com") support@email.com
+          .col-md-4
+            .item-contact
+              .icon
+              h4 ADDRESS
+              p No: 58 A, East Madison Street, <br>Baltimore, MD, USA 4508
+        .row.justify-content-center
+          .col-md-6
+            .contact-form
+              h3 Contact Form
+              form(action="")
+                .form-group
+                  //- label
+                  //-   | name
+                  input.form-control(type="text" placeholder="Name")
+                .form-group
+                  //- label
+                  //-   | wedding date
+                  //-   span *
+                  input.form-control(type="text" placeholder="Email")
+                .form-group
+                  input.form-control(type="text" placeholder="Subject")
+                .form-group
+                  textarea.form-control(placeholder="Message" rows="7")
+                .form-action
+                  button.btn.btn-primary(type="submit") Send

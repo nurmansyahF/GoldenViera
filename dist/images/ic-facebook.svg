@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic-facebook" transform="translate(-4.000000, 0.000000)">
+            <rect id="base" x="0" y="0" width="16" height="16"></rect>
+            <path d="M9.67375539,15.999967 L9.67375539,8.99998144 L12.007796,8.99998144 L12.452192,6.10435753 L9.67375539,6.10435753 L9.67375539,4.22530256 C9.67375539,3.43312891 10.0618771,2.66094422 11.3062593,2.66094422 L12.5693793,2.66094422 L12.5693793,0.195617272 C12.5693793,0.195617272 11.4231109,-1.28785871e-13 10.3271964,-1.28785871e-13 C8.03905417,-1.28785871e-13 6.54345179,1.38686848 6.54345179,3.89748342 L6.54345179,6.10435753 L4,6.10435753 L4,8.99998144 L6.54345179,8.99998144 L6.54345179,15.999967 L9.67375539,15.999967 Z" id="f" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

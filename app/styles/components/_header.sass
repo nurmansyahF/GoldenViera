@@ -1,3 +1,292 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* Header */
 /* ------------------------------------------------------------------------------------------------ */
+
+.header
+  padding: 16px 4%
+  background: $aksen1
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  transition: all .3s ease
+  z-index: 100
+  &.fixed
+    padding-top: 8px
+    padding-bottom: 8px
+    // top: -300px
+    .header-logo img
+      max-height: 50px
+  &.fixed.sticky
+    top: 0
+  &-logo img
+    max-height: 70px
+  &-nav
+    display: flex
+    height: 100%
+    &>ul
+      display: flex
+      align-items: center
+      padding: 0
+      margin: 0
+      justify-content: flex-end
+      width: 100%
+      position: relative
+      &>li
+        padding: 0 24px
+        &>a
+          padding: 0 0 4px
+          text-transform: uppercase
+          font-size: 15px
+          font-weight: 600
+          color: $text
+          text-decoration: none
+          transition: all .3s
+          position: relative
+        &:hover,
+        &.active
+          &>a
+            color: $secondary
+            border-bottom: 2px solid $secondary
+            &:after
+              transform: scaleY(-1)
+  &-right
+    height: 100%
+    display: flex
+    align-items: center
+    position: relative
+    ul
+      padding: 0
+      margin: 0
+      display: flex
+      justify-content: flex-end
+      width: 100%
+      position: relative
+    li
+      padding: 0 12px
+      text-align: center
+    a
+      display: inline-block
+      width: 14px
+      height: 14px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+  .has-child
+    &> a
+      &:after
+        content: ""
+        position: absolute
+        top: 3px
+        right: -25px
+        background-image: url(../images/chevron-down-solid.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        width: 15px
+        height: 15px
+    &:hover
+      .sub-menu
+        transform: scaleY(1)
+        overflow: visible
+        visibility: visible
+  .sub-menu
+    padding: 35px
+    background: #ffffff
+    width: 100%
+    position: absolute
+    top: 95%
+    left: 0
+    right: 0
+    margin: auto
+    z-index: 20
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.15)
+    transition: all 0.4s ease-in-out
+    visibility: hidden
+    overflow: hidden
+    transform-origin: 0 0
+    transform: scaleY(0)
+    .head-sm
+      font-size: 15px
+      font-weight: 600
+      text-transform: uppercase
+      margin-bottom: 0
+      letter-spacing: 0.05em
+      margin-bottom: 10px
+      display: block
+    ul
+      padding: 0
+      margin: 0
+    li
+      display: block
+      padding-left: 18px
+      position: relative
+      &:before
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        border: 1px solid #4c834a;
+      a
+        display: inline-block
+        padding: 8px 0
+        font-size: 14px
+        line-height: 19px
+        color: #151413
+        text-decoration: none
+      &:hover a
+        color: #4c834a
+
+    .box-img
+      width: 100%
+      position: relative
+      overflow: hidden
+      .img
+        width: 100%
+        position: relative
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        transition: all .3s
+        &:before
+          content: ""
+          padding: 58.8% 0
+          display: block
+      &:hover
+        .img
+          transform: scale(1.1)
+
+  .burger-icon
+    position: absolute
+    top: 16px
+    right: 0
+    z-index: 251
+    width: 30px
+    padding-top: 32px
+    cursor: pointer
+    transition: all .5s
+    display: none
+    float: right
+    span
+      position: absolute
+      right: 0
+      width: 100%
+      height: 2px
+      background-color: $text
+      transition: opacity .5s .5s, top .5s .4s, transform .5s
+      transform: rotate(0deg)
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 8px
+        width: 75%
+      &:nth-child(3)
+        top: 16px
+        width: 90%
+    &:after
+      content: ""
+      font-size: 10px
+      line-height: 16px
+      font-style: normal
+      position: relative
+      display: block
+      width: 100%
+      text-align: center
+      color: #ffffff
+    &:hover
+      cursor: pointer
+
+  +responsive(1200px)
+    padding-left: 0
+    padding-right: 0
+    &-nav
+      &> ul > li
+        padding: 0 16px
+  +maxtablet
+    z-index: 10
+    &-nav
+      // display: none
+      position: fixed
+      top: 0
+      left: 0
+      width: 265px
+      height: 100vh
+      overflow-y: auto
+      background: #FFF
+      align-items: start
+      transform: translateX(-500px)
+      transition: all .3s ease
+      z-index: 10
+      &>ul
+        height: 100%
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        padding-top: 100px
+        &>li
+          width: 100%
+          margin-bottom: 8px
+          max-height: 24px
+          &.has-child
+            &:hover
+              max-height: 999999px
+              .sub-menu
+                max-height: 999999px
+    &-right
+      padding-right: 30px
+    .sub-menu
+      position: relative
+      top: auto
+      left: auto
+      right: 0
+      max-height: 0
+      overflow: hidden
+      box-shadow: none
+      padding: 15px
+      .box-img
+        margin-bottom: 24px
+    .burger-icon
+      display: block
+
+  +mobile
+    &-logo
+      img
+        max-height: 55px
+    &-right
+      margin-top: -25px
+    .burger-icon
+      top: -10px
+.menu-open
+  &:after
+    content: ""
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    background: #000000
+    opacity: .3
+    display: block
+    z-index: 5
+  .burger-icon
+    span
+      &:nth-child(1)
+        top: 0
+        width: 95%
+      &:nth-child(2)
+        top: 8px
+        width: 100%
+      &:nth-child(3)
+        top: 16px
+        width: 75%
+  .header
+    &-logo
+      z-index: 300
+      position: relative
+    &-nav
+      display: block
+      transform: translateX(0)
+    .sub-menu
+      max-height: 999999px

@@ -1,4 +1,478 @@
 extends templates/layout.pug
 
 block content
-  h1 Heading 1
+  .homepage
+    .slider-home(style="background-image: url(images/slider-bg_1920X_green.jpg)")
+      .container-big
+        .slider
+          .item.row
+            .col-md-6
+              .text
+                h2 NEW ARRIVALS 2020
+                h3 Accessories
+                a.btn-wline(href="#") Shop Now
+            .col-md-6
+              .img-box
+                img(src="images/img-01.jpg", alt="Img 01")
+
+          .item.row
+            .col-md-6
+              .text
+                h2 NEW ARRIVALS 2020
+                h3 Cosmetics
+                a.btn-wline(href="#") Shop Now
+            .col-md-6
+              .img-box
+                img(src="images/FPK-2018091818.jpg", alt="Img 01")
+          .item.row
+            .col-md-6
+              .text
+                h2 NEW ARRIVALS 2020
+                h3 Skin Care
+                a.btn-wline(href="#") Shop Now
+            .col-md-6
+              .img-box
+                img(src="images/img-product-01.jpg", alt="Img 01")
+
+    .home-category
+      .container
+        .row.justify-content-center
+          .col-md-2
+            .icon(style="background-image: url(images/icon-6.webp)")
+            a.btn(href="#") CATEGORY 1
+          .col-md-2
+            .icon(style="background-image: url(images/icon-5.webp)")
+            a.btn(href="#") CATEGORY 2
+          .col-md-2
+            .icon(style="background-image: url(images/icon-4.webp)")
+            a.btn(href="#") CATEGORY 3
+          .col-md-2
+            .icon(style="background-image: url(images/icon-3.webp)")
+            a.btn(href="#") CATEGORY 4
+          .col-md-2
+            .icon(style="background-image: url(images/icon-2.webp)")
+            a.btn(href="#") CATEGORY 5
+          .col-md-2
+            .icon(style="background-image: url(images/icon-1.webp)")
+            a.btn(href="#") CATEGORY 6
+
+    .grid-banner
+      .container-big
+        .row.justify-content-center
+          .col-md-4
+            .item
+              .banner(style="background-image: url(images/img-grid-banner-01.png);background-color: #94d8d6;")
+              .text
+                span.catpro BIG SALE
+                h3.catname ORGANIC CREAM
+                a.btn(href="#" style="background: #4a9593") Shop Now
+            .item
+              .banner(style="background-image: url(images/img-grid-banner-02.png);background-color:#e8f6d8;")
+              .text
+                span.catpro 20% OFF
+                h3.catname(style="color: #000") ORGANIC CREAM
+                a.btn(href="#" style="background: #73984e") Shop Now
+          .col-md-4
+            .item.big
+              .banner(style="background-image: url(images/img-grid-banner.png);background-color:#f8edec;")
+              .text
+                span.catpro Big Million Offer
+                h3.catname(style="color: #e4635b") ORGANIC CREAM
+                a.btn(href="#" style="background: #d48c02") Shop Now
+          .col-md-4
+            .item
+              .banner(style="background-image: url(images/img-grid-banner-02.png);background-color:#f9ced8;")
+              .text
+                span.catpro NEW
+                h3.catname(style="color: #ca6786") ORGANIC CREAM
+                a.btn(href="#" style="background: #ca6786") Shop Now
+            .item
+              .banner(style="background-image: url(images/img-grid-banner-01.png);background-color: #ffecdc;")
+              .text
+                span.catpro NATURAL
+                h3.catname(style="color: #ca6786") ORGANIC CREAM
+                a.btn(href="#" style="background: #ce8f68") Shop Now
+
+    .home-product-slider
+      .container-big
+        .heading-text
+          h2 Awesome & Unique Features
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+
+        .slider-hprdct
+          .item.has-sale
+            a(href="#")
+              span.tag-sale Sale
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+              .desc
+                .star
+                .name
+                  h3 Lorem Ipsuem
+                .price $389.00
+          .item.has-sale
+            a(href="#")
+              span.tag-sale Sale
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+              .desc
+                .star
+                .name
+                  h3 Lorem Ipsuem
+                .price $389.00
+          .item.has-sale
+            a(href="#")
+              span.tag-sale Sale
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+              .desc
+                .star
+                .name
+                  h3 Lorem Ipsuem
+                .price $389.00
+          .item.has-sale
+            a(href="#")
+              span.tag-sale Sale
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+              .desc
+                .star
+                .name
+                  h3 Lorem Ipsuem
+                .price $389.00
+          .item.has-sale
+            a(href="#")
+              span.tag-sale Sale
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+              .desc
+                .star
+                .name
+                  h3 Lorem Ipsuem
+                .price $389.00
+          .item.has-sale
+            a(href="#")
+              span.tag-sale Sale
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+              .desc
+                .star
+                .name
+                  h3 Lorem Ipsuem
+                .price $389.00
+
+    .trending-product(style="background-image: url(images/img-6.jpg)")
+      .container
+        .heading-text
+          h2 Awesome Trending Products
+        .tab-custom
+          ul.nav.nav-tabs
+            li
+              a.active(href="#trending" data-toggle="tab") Trending
+            li
+              a(href="#bestsellers" data-toggle="tab") Best Sellers
+            li
+              a(href="#newproducts" data-toggle="tab") New Products
+        .tab-content
+          #trending.tab-pane.active(data-toggle="tab")
+            .slider-tp
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+          #bestsellers.tab-pane(data-toggle="tab")
+            .slider-tp
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+          #newproducts.tab-pane(data-toggle="tab")
+            .slider-tp
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+              .item.has-sale
+                a(href="#")
+                  span.tag-sale Sale
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .desc
+                    .star
+                    .name
+                      h3 Lorem Ipsuem
+                    .price $389.00
+
+    .special-categories
+      .container
+        .heading-text
+          h2 Special <br>Categories
+        .row
+          .col-md-4
+            .item
+              .box-img
+                a(href="#")
+                  .img(style="background-image: url(images/img-product-01.jpg);")
+              .box-text
+                h3
+                  a(href="#") Lorem ipsum
+                .qtt
+                  span 11 items
+          .col-md-4
+            .item
+              .box-img
+                a(href="#")
+                  .img(style="background-image: url(images/img-product-01.jpg);")
+              .box-text
+                h3
+                  a(href="#") Lorem ipsum
+                .qtt
+                  span 11 items
+          .col-md-4
+            .item
+              .box-img
+                a(href="#")
+                  .img(style="background-image: url(images/img-product-01.jpg);")
+              .box-text
+                h3
+                  a(href="#") Lorem ipsum
+                .qtt
+                  span 11 items
+
+    .latest-news
+      .container
+        .heading-text
+          h2 Our <br>Latest News
+        .slider-ln
+          .item.row
+            .col-md-6
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+
+            .col-md-6
+              .box-text
+                .date-auth
+                 span Sep 21 , 2019
+                 span Author 1
+                h3
+                  a(href="#") The foundation to increase your face value!
+                .short-desc
+                  p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligu...
+                .btn-view
+                  a.btn.btn-primary(href="#") Read More
+                  a.view
+          .item.row
+            .col-md-6
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+
+            .col-md-6
+              .box-text
+                .date-auth
+                 span Sep 21 , 2019
+                 span Author 1
+                h3
+                  a(href="#") The foundation to increase your face value!
+                .short-desc
+                  p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligu...
+                .btn-view
+                  a.btn.btn-primary(href="#") Read More
+                  a.view
+          .item.row
+            .col-md-6
+              .box-img
+                .img(style="background-image: url(images/img-product-01.jpg);")
+
+            .col-md-6
+              .box-text
+                .date-auth
+                 span Sep 21 , 2019
+                 span Author 1
+                h3
+                  a(href="#") The foundation to increase your face value!
+                .short-desc
+                  p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligu...
+                .btn-view
+                  a.btn.btn-primary(href="#") Read More
+                  a.view
+
+    .brands-partner
+      .container
+        .slider-bp
+          .item
+            img(src="images/client-1_250x250.png", alt="Client1")
+          .item
+            img(src="images/client-2_250x250.png", alt="Client2")
+          .item
+            img(src="images/client-3_250x250.png", alt="Client3")
+          .item
+            img(src="images/client-4_250x250.png", alt="Client4")
+          .item
+            img(src="images/client-5_250x250.png", alt="Client5")
+          .item
+            img(src="images/client-6_250x250.png", alt="Client6")
+
+    .our-services
+      .container-big
+        .row
+          .col-md-3
+            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .box-text
+              h3 Free Ship Worldwide
+              p You will get free home delivery to the items in your cart on your first purchase
+          .col-md-3
+            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .box-text
+              h3 Special Offers
+              p Shop from our special offer day and get online shopping offers on multiple items.
+          .col-md-3
+            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .box-text
+              h3 Special Offers
+              p Shop from our special offer day and get online shopping offers on multiple items.
+          .col-md-3
+            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .box-text
+              h3 Special Offers
+              p Shop from our special offer day and get online shopping offers on multiple items.
+
+    .our-newsletter
+      .container
+        .heading-text
+          h2 Join Our <br>Newsletter
+          p Sale up to 20% off for your next purchase<br> in this month
+        form.form-newsletter(action="")
+          .form-group
+            input.form-control(type="text")
+            button.btn.btn-primary(type="submit") Subscribe
+
+
+

@@ -1,0 +1,261 @@
+extends templates/layout.pug
+
+block content
+  .products
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 Products
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Products
+    .products-wrapper
+      .container
+        .row
+          .col-lg-3
+            .side-filter
+              //- h4 Category
+              //- .filter-ec
+              //-   ul.ec-wrapper#ec-filter
+              //-     li.card
+              //-       div.card-header#ec1-heading
+              //-         a(href="#" data-toggle="collapse" data-target="#ec1-content" aria-expanded="true" aria-controls="ec1") Eye Makeup
+              //-       .collapse.how#ec1-content(aria-labelledby="#ec1-content" data-parent="#ec-filter")
+              //-         p content
+              .sec-filter
+                h4 Shop By Price
+                .filter-price
+                  ul
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="price1" name="customRadio")
+                      label.custom-control-label(for="price1") $100 - $200
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="price2" name="customRadio")
+                      label.custom-control-label(for="price2") $200 - $300
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="price3" name="customRadio")
+                      label.custom-control-label(for="price3") $300 - $500
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="price4" name="customRadio")
+                      label.custom-control-label(for="price4") $700 - $1000
+              .filter.sec-filter
+                h4 Shop By Color
+                .filter-color
+                  a(href="#")
+                    span(style="background-color:#a89166;")
+                  a(href="#")
+                    span(style="background-color:#0f0212;")
+                  a(href="#")
+                    span(style="background-color:#00ff00;")
+              .sec-filter
+                h4 Shop By Type
+                .filter-type
+                  ul
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type1" name="customRadio")
+                      label.custom-control-label(for="type1") Perfume
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type2" name="customRadio")
+                      label.custom-control-label(for="type2") Face Mask
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type3" name="customRadio")
+                      label.custom-control-label(for="type3") Makeup Brush
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type3" name="customRadio")
+                      label.custom-control-label(for="type3") Foundation Powder
+              .sec-filter
+                h4 Best Seller
+                .best-seller
+                  .item-prdct.has-sale
+                    a(href="#")
+                      span.tag-sale Sale
+                      .box-img
+                        .img(style="background-image: url(images/img-product-01.jpg);")
+                      .desc
+                        .star
+                        .name
+                          h3 Lorem Ipsuem
+                        .price $389.00
+
+
+          .col-lg-9
+            .filter-prdct
+              .col.view
+                label VIEW
+                .view-mode
+                  a.list-mode(href="#")
+                  a.grid-mode.grid2(href="#")
+                  a.grid-mode.grid3(href="#")
+                  a.grid-mode.grid4(href="#")
+                  a.grid-mode.grid5(href="#")
+              .col.show-sort
+                label SHOW
+                select.select.show
+                  option(value="8") 8
+                  option(value="12") 12
+                  option(value="16") 16
+                  option(value="20") 20
+                  option(value="24") 24
+                  option(value="30") 30
+                label SORT
+                select.select.sort
+                  option(value="Faeutred") Feautred
+                  option(value="Price, low to high") Price, low to high
+                  option(value="Price, high to low") Price, high to low
+            .product-list.row
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00
+              .col-lg-4
+                .item-prdct.has-sale
+                  a(href="#")
+                    span.tag-sale Sale
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                    .desc
+                      .star
+                      .name
+                        h3 Lorem Ipsuem
+                      .price $389.00

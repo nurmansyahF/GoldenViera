@@ -1,3 +1,828 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* Content */
 /* ------------------------------------------------------------------------------------------------ */
+
+// Homepage
+.slider-home
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  .slider
+    padding: 40px 0 0 0
+    position: relative
+    img
+      max-height: 860px
+    .text
+      height: 100%
+      width: 100%
+      display: flex
+      justify-content: center
+      flex-direction: column
+      padding: 70px 0px 10px 100px
+      margin-top: -120px
+      h2
+        font-size: 20px
+        line-height: 1.1em
+        margin-bottom: 15px
+        text-transform: uppercase
+      h3
+        font-size: 75px
+        line-height: 1.1em
+        margin-bottom: 15px
+        text-transform: uppercase
+      .btn-wline
+        display: inline-block
+        margin: 0
+        text-decoration: none
+        vertical-align: middle
+        cursor: pointer
+        white-space: nowrap
+        // transition: all 0.4s ease-in-out
+        outline: none
+        background: rgba(0,0,0,0)
+        color: #000000
+        position: relative
+        font-weight: 600
+        &:before
+          content: ""
+          display: inline-block
+          background: #030d1d
+          vertical-align: middle
+          width: 320px
+          height: 1px
+          margin-right: 12px
+          // transition: all 0.4s ease-in-out
+        &:hover
+          color: #4c834a
+          &:before
+            background: #4c834a
+
+    .owl-dots
+      position: absolute
+      bottom: 110px
+      right: calc(50% + 12px)
+      width: 75px
+      .owl-dot
+        width: 100%
+        display: block
+        text-align: right
+        outline: none
+        margin-bottom: 8px
+        padding-bottom: 6px
+        span
+          display: inline-block
+          font-size: 18px
+          line-height: 1.1
+          font-weight: bold
+          color: #b4b4b4
+        &.active
+          border-bottom: 1px solid #4c834a
+          span
+            color: #000
+
+.home-category
+  padding-top: 90px
+  .col-md-2
+    align-items: center
+    justify-content: center
+    display: flex
+    flex-direction: column
+  .icon
+    width: 80px
+    height: 80px
+    margin: 0 auto
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+  .btn
+    margin-top: 20px
+    display: inline-block
+
+.grid-banner
+  padding: 90px 0
+  .row
+    margin-left: -10px
+    margin-right: -10px
+  .col-md-4
+    padding-left: 10px
+    padding-right: 10px
+  .item
+    width: 100%
+    position: relative
+    overflow: hidden
+    // background-color: #94d8d6
+    margin-bottom: 20px
+    &:before
+      content: ""
+      padding: 33.5% 0
+      display: block
+
+    &:last-child
+      margin-bottom: 0
+    &:hover
+      .banner
+        transform: scale(1.1)
+    &.big
+      &:before
+        content: ""
+        padding: 69% 0
+      .text
+        top: auto
+        bottom: 0
+  .text
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    padding: 40px 35px
+    .btn
+      text-transform: capitalize
+      text-decoration: none
+      &:hover
+        color: #FFF
+  .banner
+    position: absolute
+    top: 0
+    left: 0
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    width: 100%
+    height: 100%
+    transition: all 0.5s linear
+  .catpro
+    color: #000000
+    // text-transform: uppercase
+    max-resolution: 0 0 10px
+    font-size: 20px
+    line-height: 1.1
+    font-weight: bold
+  .catname
+    color: #ffffff
+    font-size: 28px
+    font-family: Open Sans
+    text-transform: uppercase
+    margin: 0 0 15px
+
+.heading-text
+  text-align: center
+  max-width: 728px
+  margin: 0 auto
+  margin-bottom: 60px
+  h2
+    font-size: 40px
+    letter-spacing: 0
+    line-height: 1.1
+    margin-bottom: 20px
+
+.home-product-slider
+  padding: 90px 0
+
+.owl-carousel
+  .owl-nav
+    text-align: center
+    .owl-prev,
+    .owl-next
+      width: 30px
+      height: 30px
+      background: #FFF !important
+      border-radius: 50%
+      border: 1px solid #000 !important
+      position: relative
+      margin: 0 1.5px
+      outline: none
+      transition: all 0.4s
+      span
+        background-image: url(../images/chevron-down-solid.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: center
+        width: 25px
+        height: 25px
+        display: inline-block
+        vertical-align: middle
+    .owl-prev
+      span
+        transform: rotate(90deg)
+      &:before
+        content: ""
+        width: 50px
+        height: 1px
+        background: #000000
+        position: absolute
+        top: calc(50% - 1px)
+        left: -50px
+        transition: all 0.4s
+      &:after
+        content: ""
+        width: 30px
+        height: 1px
+        background: #000000
+        position: absolute
+        top: calc(50% + 3px)
+        left: -30px
+        transition: all 0.4s
+      &:hover
+        background: #4c834a
+        border-color: #4c834a
+        &:before
+          width: 30px
+          left: -30px
+        &:after
+          left: -50px
+          width: 50px
+    .owl-next
+      span
+        transform: rotate(270deg)
+      &:before
+        content: ""
+        width: 50px
+        height: 1px
+        background: #000000
+        position: absolute
+        top: calc(50% - 1px)
+        right: -50px
+        transition: all 0.4s
+      &:after
+        content: ""
+        width: 30px
+        height: 1px
+        background: #000000
+        position: absolute
+        top: calc(50% + 3px)
+        right: -30px
+        transition: all 0.4s
+      &:hover
+        background: #4c834a
+        border-color: #4c834a
+        &:before
+          width: 30px
+          right: -30px
+        &:after
+          right: -50px
+          width: 50px
+
+
+.slider-hprdct,
+.slider-tp
+  .owl-stage-outer
+    padding-top: 50px
+  .item
+    position: relative
+    // width: 292px
+    width: 351px
+    padding: 0 35px 0px
+    a
+      position: relative
+      text-decoration: none
+      display: block
+      &:hover
+        text-decoration: none
+  .owl-item.active.center
+    transform: translateY(-50px)
+    .item
+      padding: 0
+      .desc
+        h3
+          color: #4c834a
+  .box-img
+    width: 100%
+    position: relative
+    .img
+      width: 100%
+      position: relative
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      &:before
+        content: ""
+        padding: 58.8% 0
+        display: block
+  .tag-sale
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+    padding: 4px 10px
+    color: #FFF
+    background-color: #030d1d
+    z-index: 3
+    font-size: 13px
+    line-height: 1.1
+    font-weight: 600
+  .desc
+    text-align: center
+    color: #9a9a9a
+    padding: 20px 0
+    background: #FFF
+    h3
+      font-size: 16px
+      line-height: normal
+      margin: 0 0 5px
+      font-weight: 600
+    .price
+      font-weight: bold
+
+.slider-tp
+  .owl-stage-outer
+    padding-bottom: 30px
+  .item
+    width: auto
+    padding: 0
+  .owl-item.active.center
+    transform: translateY(0)
+    .item
+      padding: 0
+
+.trending-product
+  background-color: #fad75f
+  padding: 90px 0 460px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  .nav.nav-tabs
+    width: 100%
+    text-align: center
+    li
+      display: inline-block
+      margin-right: 15px;
+      padding: 0;
+      float: none;
+      a
+        font-weight: 600;
+        padding: 3px 25px;
+        font-size: 16px;
+        display: inline-block;
+        margin: 0 0px 0 0;
+        background: #000000
+        color: #ffffff
+        text-decoration: none
+        text-transform: uppercase
+        &.active
+          background: #4c834a
+  .tab-pane
+    display: none
+    opacity: 0
+    transition: all .3s
+    &.active
+      display: block
+      opacity: 1
+
+.special-categories
+  margin-top: -375px
+  padding-bottom: 90px
+  .item
+    border: 8px solid #ffffff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.07);
+  .box-img
+    width: 100%
+    position: relative
+    .img
+      width: 100%
+      position: relative
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      &:before
+        content: ""
+        padding: 58.8% 0
+        display: block
+  .box-text
+    border: none
+    padding: 20px
+    text-align: center
+    h3
+      margin: 0
+      padding: 0
+      a
+        color: #4c834a
+        text-decoration: none
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        padding: 0
+        margin: 0
+    .qtt
+      span
+        color: #030d1d;
+        font-weight: bold;
+        margin: 5px 0 0;
+        font-size: 16px
+        position: relative
+        &:before
+          content: "-"
+          display: inline-block
+          margin-right: 5px
+        &:after
+          content: "-"
+          display: inline-block
+          margin-left: 5px
+
+.our-newsletter
+  padding: 90px 0
+  .heading-text
+    margin-bottom: 20px
+    h2
+      margin-bottom: 20px
+  .form-newsletter
+    width: 738px
+    margin: 0 auto
+  .form-control
+    display: inline-block;
+    padding: 0 15px;
+    height: 60px;
+    width: 80%;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #000000;
+    border: 1px solid #292929;
+    vertical-align: middle
+  .btn
+    width: auto;
+    display: inline-block;
+    height: 60px;
+    padding: 0px 25px;
+    margin-left: -5px;
+    margin-top: -1px;
+    border: none
+    vertical-align: middle
+    &:hover
+      background: #000
+
+.latest-news
+  padding: 90px 0
+
+  .owl-stage-outer
+    padding-bottom: 60px
+  .item
+    display: flex
+    align-items: center
+    .col-md-6
+      padding-left: 10px
+      padding-right: 10px
+    .box-img
+      width: 100%
+      position: relative
+    .img
+      width: 100%
+      position: relative
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      &:before
+        content: ""
+        padding: 58.8% 0
+        display: block
+    .box-text
+      .date-auth
+        margin-bottom: 10px
+      h3
+        font-size: 18px
+        line-height: 1.1
+        margin: 0 0 15px
+        a
+          color: #000000
+          text-decoration: none
+        &:hover
+          color: #4c834a
+      .short-desc
+        padding-bottom: 10px
+        border-bottom: 1px solid #e4e4e4
+        margin-bottom: 20px
+        font-size: 15px
+        line-height: 1.7
+
+.brands-partner
+  padding: 90px 0
+  .slider-bp
+    .item
+      padding: 10px
+
+.our-services
+  padding: 90px 0
+  background: #f5f5f5
+  .icon
+    width: 80px
+    height: 80px
+    margin: 0 auto
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+  .box-text
+    max-width: 343px
+    margin: 0 auto
+    text-align: center
+    h3
+      font-size: 18px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      position: relative;
+      line-height: normal;
+
+
+
+// Banner small
+
+.banner-small
+  width: 100%
+  position: relative
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 0 40%
+  &:before
+    content: ""
+    width: 100%
+    padding: 6.3% 0
+    display: block
+  &:after
+    content: ""
+    width: 100%
+    height: 100%
+    background: #000
+    opacity: 0.8
+    position: absolute
+    top: 0
+    left: 0
+
+.title-breadcrumbs
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  h1
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 2.25em;
+    line-height: 1.5em
+    font-weight: bold;
+    color: #FFF
+  .breadcrumbs
+    li
+      display: inline-block
+      position: relative
+      &:after
+        content: "/"
+        display: inline-block;
+        font-size: 1em;
+        padding-right: 2px;
+        margin-right: 2px;
+        margin-left: 2px
+        color: #ffffff;
+      &:last-child
+        &:after
+          display: none
+    a,
+    span
+      padding-right: 2px
+      margin-right: 2px
+      color: #FFF
+      text-decoration: none
+      transition: color .3s ease
+    a:hover
+      color: $secondary
+
+
+// Products
+.products
+  .products-wrapper
+    padding: 64px 0 128px
+  .side-filter
+    h4
+      color: #231f1e;
+      padding: 0;
+      border-radius: px;
+      padding-bottom: 10px;
+      font-size: 1.25em;
+      border-bottom: 1px solid #dddddd
+      margin-bottom: 15px
+    .sec-filter
+      margin-bottom: 50px
+    .filter
+      &-color
+        a
+          display: inline-block
+          width: 28px
+          height: 28px
+          line-height: 0
+          border: 2px solid #dddddd
+          padding: 4px
+          border-radius: 50%
+          transition: all .3s ease
+          margin-right: 15px
+          span
+            display: inline-block
+            width: 100%
+            height: 100%
+            border-radius: 50%
+          &:last-child
+            margin-right: 0
+          &:hover
+            border-color: $primary
+      &-price,
+      &-type
+        li
+          margin-bottom: 16px
+          &:last-child
+            margin-bottom: 0
+        label
+          padding: 0 8px
+  .filter-prdct
+    display: flex
+    justify-content: space-between
+    label
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 10px 0 0;
+      color: #151413;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      display: inline-block
+      vertical-align: middle
+  .view-mode
+    border: 1px solid #e4e4e4;
+    padding: 5px 12px;
+    max-width: 190px
+    display: inline-block
+    vertical-align: middle
+    a
+      min-width: 19px;
+      height: 26px;
+      display: inline-block;
+      vertical-align: middle
+      margin-right: 10px
+      margin-left: 0;
+      position: relative;
+      cursor: pointer;
+      background-color: #000
+      &:last-child
+        margin-right: 0
+  .show-sort
+    max-width: 380px
+    margin-left: -20px
+  .select
+    display: inline-block
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+    &.show
+      width: 60px
+    &.sort
+      width: 150px
+  .product-list
+    padding-top: 30px
+    padding-bottom: 30px
+
+
+// About
+
+.about
+  &-wrapper
+  .ab
+    &-1
+      .img-box
+        width: 100%
+        position: relative
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        &:before
+          content: ""
+          padding: 37.8% 0
+          display: block
+      .about-text
+        width: 82%
+        height: 100%
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        flex-direction: column
+        h3,
+        h4
+          font-weight: bold
+          margin-bottom: 15px
+          line-height: 1.5em
+        h3
+          font-size: 27px
+        h4
+          font-size: 16px
+          margin-bottom: 0
+      .about-logo
+        margin-bottom: 30px
+        img
+          max-height: 178px
+
+    &-2
+      padding: 80px 0
+      .item-wwd
+        width: 100%
+        border: 1px solid $secondary
+        padding: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        margin-bottom: 24px
+        transition: all .3s ease
+        &:hover
+          border-color: #000
+          h4
+            color: $secondary
+          .aksen
+            &:before,
+            &:after
+              background: #000
+        a
+          text-decoration: none
+          color: #000
+        h4
+          color: #000
+          font-size: 20px
+          line-height: 1.5em
+          font-weight: bold
+          margin-bottom: 15px
+          transition: all .3s ease
+        .aksen
+          width: 100%
+          position: relative
+          display: block
+          margin-bottom: 20px
+          transition: all .3s ease
+          &:before
+            content: ""
+            display: inline-block
+            width: 70px
+            height: 1px
+            background: $primary
+            margin: 0 5px
+            vertical-align: middle
+            transition: all .3s ease
+          &:after
+            content: ""
+            background: $primary
+            position: relative
+            vertical-align: middle
+            width: 15px;
+            height: 15px;
+            border: 3px solid #FFF;
+            display: inline-block
+            position: absolute
+            top: 6px
+            left: 0
+            right: 0
+            margin: 0 auto
+            transition: all .3s ease
+
+
+// Contact
+.contact
+  .contact-wrapper
+    padding: 80px 0
+  .item-contact
+    width: 100%
+    border: 1px solid $secondary
+    padding: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    margin-bottom: 24px
+    transition: all .3s ease
+    flex-direction: column
+    .icon
+      display: inline-block
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background: $secondary
+      margin-bottom: 20px
+    h4
+      font-weight: bold
+    b
+      display: inline-block
+      margin-right: 5px
+    a
+      color: #000
+    p
+      margin-bottom: 0
+    &:hover
+      border-color: #000
+  .contact-form
+    padding-top: 40px
+    h3
+      font-weight: bold
+      font-size: 36px
+      line-height: 1.5em
+      text-align: center

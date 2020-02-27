@@ -1,3 +1,95 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* Custom Plugins */
 /* ------------------------------------------------------------------------------------------------ */
+
+.select
+  height: 40px
+  width: 100%
+  border-radius: 4px
+  opacity: 0
+  &.bootstrap-select
+    opacity: 1
+
+.dropdown.bootstrap-select
+  position: relative
+  select
+    position: absolute
+    bottom: 0
+    left: 50%
+    display: block
+    width: 0.5px
+    height: 100%
+    padding: 0
+    opacity: 0
+    border: none
+  .btn
+    line-height: 24px
+    width: 100%
+    text-align: left
+    border: 1px solid $border
+    border-radius: 4px
+    background-color: #FFF
+    padding: 7px 24px 7px 12px
+    color: $text
+    &:after
+      content: ""
+      width: 20px
+      height: 20px
+      background-image: url(../images/chevron-down-solid.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      top: 10px
+      right: 8px
+      position: absolute
+  .bs-placeholder
+    color: #ABABAB
+  &.show .btn
+    border-color: $primary
+  div.dropdown-menu
+    position: absolute
+    top: 100%
+    left: 0
+    z-index: 1000
+    display: none
+    text-align: left
+    background-color: #fff
+    background-clip: padding-box
+    border: 1px solid $primary
+    border-radius: 4px
+    width: 100%
+    min-width: 200px
+    margin: 3px 0
+    .inner.show::-webkit-scrollbar
+      width: 5px
+      background-color: #FFF
+    a
+      display: block
+      padding: 6px 12px
+      color: #000
+      font-weight: normal
+      cursor: pointer
+      text-decoration: none
+      outline: none !important
+      &:hover
+        background: #F9F9F9
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+    li
+      position: relative
+      .fa
+        position: absolute
+        right: 5px
+        top: 15px
+        color: #999
+        display: none
+      &.selected,&.active
+        .fa
+          display: block
+        a
+          background: rgba(45,41,111,0.1)
+    &.show
+      display: block
+
