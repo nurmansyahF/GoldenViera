@@ -203,6 +203,54 @@
         }
       });
 
+      //SLIDER
+      $('.slider-hd').each(function(){
+        var t = $(this),
+            nItem = t.children().length;
+
+        if (nItem > 1){
+          t.addClass('owl-carousel');
+          t.owlCarousel({
+            items: 1,
+            loop: true,
+            dots: false,
+            nav: true,
+            margin: 0,
+            center: true,
+            navText: ["<span class='icon-chevron-left'></span>","<span class='icon-chevron-right'></span>"],
+            autoplay: true,
+            autoplayTimeout: 8000,
+            autoplaySpeed: 1200,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut'
+          })
+        }
+      });
+
+      //SLIDER
+      $('.slider-relprdct').each(function(){
+        var t = $(this),
+            nItem = t.children().length;
+
+        if (nItem > 1){
+          t.addClass('owl-carousel');
+          t.owlCarousel({
+            items: 4,
+            loop: true,
+            dots: false,
+            nav: true,
+            margin: 30,
+            center: false,
+            navText: ["<span class='icon-chevron-left'></span>","<span class='icon-chevron-right'></span>"],
+            autoplay: true,
+            autoplayTimeout: 8000,
+            autoplaySpeed: 1200,
+            animateIn: 'fadeIn',
+            animateOut: 'fadeOut'
+          })
+        }
+      });
+
 
 
       var od = $('body').find('.slider-home .owl-dot');

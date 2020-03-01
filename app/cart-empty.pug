@@ -1,0 +1,26 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "cart";
+
+block content
+  .cart
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 YOUR SHOPPING CART
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Your Shopping Cart
+    .cart-wrapper
+      .container
+        .cart-empty
+          .box-img
+            img(src="images/empty-cart.png")
+          .text
+            label No items in cart
+            p Add Itmes you want to shop
+            a.btn.btn-primary(href="products.html") Start Shopping
+

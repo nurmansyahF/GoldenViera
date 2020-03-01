@@ -1,0 +1,367 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "product-single";
+
+block content
+  .products
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 Product 1
+          ul.breadcrumbs
+            li
+              a(href='products.html') all
+            li
+              span Product 1
+    .products-wrapper
+      .container
+        .row
+          .col-lg-3
+            .side-filter
+              .sec-filter
+                h4 Shop By Type
+                .filter-type
+                  ul
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type1" name="customRadio")
+                      label.custom-control-label(for="type1") Perfume
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type2" name="customRadio")
+                      label.custom-control-label(for="type2") Face Mask
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type3" name="customRadio")
+                      label.custom-control-label(for="type3") Makeup Brush
+                    li.custom-control.custom-radio
+                      input.custom-control-input(type="radio" id="type3" name="customRadio")
+                      label.custom-control-label(for="type3") Foundation Powder
+              .sec-filter
+                h4 Hot Deals
+                .best-seller.slider-hd
+                  .item-prdct
+                    a(href="#")
+                      //- span.tag-sale Sale
+                      .box-img
+                        .img(style="background-image: url(images/img-product-01.jpg);")
+                      .desc
+                        .star
+                        .name
+                          h3 Lorem Ipsuem 1
+                        .price $389.00
+                  .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 2
+                          .price $389.00
+                  .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 3
+                          .price $389.00
+                  .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 4
+                          .price $389.00
+
+
+          .col-lg-9
+            .products-single-wrap.row
+              .col-md-6
+                .box-img.big-detail
+                  .img(style="background-image: url(images/img-product-01.jpg);")
+                .thumbnail
+                  a(href="#")
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                  a(href="#")
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+                  a(href="#")
+                    .box-img
+                      .img(style="background-image: url(images/img-product-01.jpg);")
+              .col-md-6
+                .details
+                  h2 Product 1
+                  .price
+                    span.now $300.00
+                    small.real $350.00
+                  .rated
+                  .avail
+                    label Availability:
+                    span In Stock
+                  .desc
+                    p Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...
+                  dl
+                    dt
+                      label Color:
+                    dd
+                      .filter-color
+                        a.active(href="#")
+                          span(style="background-color:#a89166;")
+                        a(href="#")
+                          span(style="background-color:#0f0212;")
+                    dt
+                      label Size:
+                    dd
+                      .sizes
+                        a.active(href="#") L
+                        a(href="#") S
+                    dt
+                      label Quantity:
+                    dd
+                      p asdf
+                    dt
+                      label Subtotal:
+                    dd
+                      .price $600.00
+                  .pd-action
+                    button.btn
+                      span Add to chart
+                    button.btn.btn-transparent
+                      span Add to whislist
+                    button.btn.btn-block.btn-transparent
+                      span Buy it now
+              .col-md-12
+                .tab
+                  .tab-custom
+                    ul.nav.nav-tabs
+                      li
+                        a.active(href="#pd" data-toggle="tab") Product Description
+                      li
+                        a(href="#reviews" data-toggle="tab") Reviews
+                      li
+                        a(href="#sd" data-toggle="tab") Shipping Details
+                  .tab-content
+                    #pd.tab-pane.active(data-toggle="tab")
+                      article.content
+                        p Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis.
+                        h4 Sample Unordered List
+                        ul
+                          li Comodous in tempor ullamcorper miaculis
+                          li Pellentesque vitae neque mollis urna mattis laoreet.
+                          li Divamus sit amet purus justo.
+                          li Proin molestie egestas orci ac suscipit risus posuere loremous
+                        h4 Sample Ordered Lista
+                        ol
+                          li Comodous in tempor ullamcorper miaculis
+                          li Pellentesque vitae neque mollis urna mattis laoreet.
+                          li Divamus sit amet purus justo.
+                          li Proin molestie egestas orci ac suscipit risus posuere loremous
+
+                        h4 Sample Paragraph Text
+                        quote
+                          p Praesent vestibulum congue tellus at fringilla. Curabitur vitae semper sem, eu convallis est. Cras felis nunc commodo eu convallis vitae interdum non nisl. Maecenas ac est sit amet augue pharetra convallis nec danos dui. Cras suscipit quam et turpis eleifend vitae malesuada magna congue. Damus id ullamcorper neque. Sed vitae mi a mi pretium aliquet ac sed elit. Pellentesque nulla eros accumsan quis justo at tincidunt lobortis denimes loremous. Suspendisse vestibulum lectus in lectus volutpat, ut dapibus purus pulvinar. Vestibulum sit amet auctor ipsum.
+                    #reviews.tab-pane(data-toggle="tab")
+                      .content
+                        .review-head
+                          h3 Customer Reviews
+                          .total-reivew
+                            .box-rate
+                              .rate
+                              span Based on 1 review
+                            a(href="#") Write a review
+
+                        .review-item
+                          .rate
+                          h4.reviewer-title Lorem ipsum dolor sit amet
+                          .date-name
+                            b.reviewer James Samuel
+                            |  on
+                            b.date  Feb 20, 2020
+                          .rev-detail
+                            p Integer vitae justo eget magna. Ultrices mi tempus imperdiet nulla malesuada pellentesque. Vitae sapien pellentesque habitant morbi.
+                          a.report(href="#") Report as Inappropriate
+                        .review-item
+                          .rate
+                          h4.reviewer-title Lorem ipsum dolor sit amet
+                          .date-name
+                            b.reviewer James Samuel
+                            |  on
+                            b.date  Feb 20, 2020
+                          .rev-detail
+                            p Integer vitae justo eget magna. Ultrices mi tempus imperdiet nulla malesuada pellentesque. Vitae sapien pellentesque habitant morbi.
+                          a.report(href="#") Report as Inappropriate
+
+                    #sd.tab-pane(data-toggle="tab")
+                      article.content
+                        h4 Returns policy
+                        p You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).
+
+                        p You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).
+
+                        p If you need to return an item, simply login to your account, view the order using the 'Complete Orders' link under the My Account menu and click the Return Item(s) button. We'll notify you via e-mail of your refund once we've received and processed the returned item.
+
+                        h4 Shipping details
+                        p You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).
+
+                        p You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).
+
+                        p If you need to return an item, simply login to your account, view the order using the 'Complete Orders' link under the My Account menu and click the Return Item(s) button. We'll notify you via e-mail of your refund once we've received and processed the returned item.
+
+
+              .col-md-12
+                .related
+                  .heading-text
+                    h2 Related <br>Products
+                  .slider-relprdct
+                    .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 1
+                          .price $389.00
+
+                    .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 1
+                          .price $389.00
+                    .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 1
+                          .price $389.00
+                    .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 1
+                          .price $389.00
+                    .item-prdct
+                      a(href="#")
+                        //- span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                        .desc
+                          .star
+                          .name
+                            h3 Lorem Ipsuem 1
+                          .price $389.00
+
+                .recently
+                  .heading-text
+                    h2 Recently <br>Viewed Products
+                  .row
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+                    .col-md-3
+                      .item-prdct
+                        a(href="#")
+                          //- span.tag-sale Sale
+                          .box-img
+                            .img(style="background-image: url(images/img-product-01.jpg);")
+                          .desc
+                            .star
+                            .name
+                              h3 Lorem Ipsuem 1
+                            .price $389.00
+

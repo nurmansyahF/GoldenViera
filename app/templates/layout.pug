@@ -16,8 +16,10 @@ html(lang="en")
       link(rel="stylesheet" href="styles/main.css")
 
   block vars
+    - var activepage = "home";
+    - var page = "";
 
-  body
+  body(class=page)
     #wrap
       block header
         include header.pug

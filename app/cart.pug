@@ -1,0 +1,69 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "cart";
+
+block content
+  .cart
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 YOUR SHOPPING CART
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Your Shopping Cart
+    .cart-wrapper
+      .container.cart-content
+        .row
+          .col-md-8
+            h3.cart-title PRODUCTS
+            .cart-item-wrapper
+              .cart-item
+                .img-box(style="background-image: url(images/img-product-01.jpg)")
+                .text-box
+                  h4 Product 1
+                  span.detdesc S/Black
+                  span.price $ 10.0
+                  .total-item
+                  span.total-price
+                    b Total:
+                    | $ 10.0
+
+            .cart-item-action
+              a.btn.btn-primary(href="#") Continue shopping
+              a.btn.btn-primary(href="#") Update Cart
+
+          .col-md-4
+            .cart-order-summary
+              h3.cart-title ORDER SUMMARY
+              .subtotal
+                label Subtotal
+                span $ 100.00
+              a.note(href="#") Add note
+              p Shipping, taxes, and discounts will be calculated at checkout.
+              input.btn.btn-primary.btn-block(href="#" type="submit" value="Proceed to Checkout")
+
+            .cart-get-shipping
+              h3.cart-title GET SHIPPING ESTIMATES
+              form(action="")
+                .form-group
+                  label Country
+                  select.select
+                    option(value="Indonesia") Indonesia
+                    option(value="Malaysia") Malaysia
+                    option(value="Singapore") Singapore
+                .form-group
+                  label Province
+                  select.select
+                    option(value="Aceh") Aceh
+                    option(value="Bali") Bali
+                    option(value="Bengkulu") Bengkulu
+                .form-group
+                  label Postal/ Zip Code
+                  input.form-control(type="text")
+                .form-action
+                  input.btn.btn-primary.btn-block(href="#" type="submit" value="Proceed to Checkout")
+
+

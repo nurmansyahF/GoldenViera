@@ -1,5 +1,8 @@
 extends templates/layout.pug
 
+block vars
+  - var activepage = "home";
+
 block content
   .homepage
     .slider-home(style="background-image: url(images/slider-bg_1920X_green.jpg)")
@@ -32,7 +35,7 @@ block content
                 a.btn-wline(href="#") Shop Now
             .col-md-6
               .img-box
-                img(src="images/img-product-01.jpg", alt="Img 01")
+                img(src="images/FPK-2018091818.jpg", alt="Img 01")
 
     .home-category
       .container

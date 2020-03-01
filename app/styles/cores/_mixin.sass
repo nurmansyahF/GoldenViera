@@ -57,3 +57,51 @@
 =large()
   +responsive(0,1200px)
     @content
+
+
+//IE8
+
+=clearfix()
+  *zoom: 1
+  &:before, &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+%visuallyhidden
+  margin: -1px
+  padding: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  clip: rect(0, 0, 0, 0)
+  position: absolute
+
+%bg-cover
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+=imgBg($padding)
+  +backgroundSize(cover)
+  background-position: center
+  background-color: #eee
+  display: block
+  &:before
+    content: ""
+    display: block
+    padding: $padding
+
+=absfull()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+=bgcover()
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat

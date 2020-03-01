@@ -1,0 +1,104 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "checkout";
+
+block header
+
+block content
+  .checkout
+    .container
+      .row
+        .col-md-7
+          .checkout-l
+            .checkout-header
+              a.header-logo(href="home.html")
+                img(src="images/logo-golden-viera.png")
+              .breadcrumb
+                ul
+                  li
+                    a(href="chart.html") Cart
+                    img.svg(src='images/chevron-down-solid.svg')
+                  li
+                    span Information
+                    img.svg(src='images/chevron-down-solid.svg')
+                  li
+                    a(href="checkout-shipping.html") Shipping
+                    img.svg(src='images/chevron-down-solid.svg')
+                  li
+                    a(href="checkout-payment.html#") Payment
+              .form-checkout
+                form(action="")
+                  .form-group
+                    .fg-heading
+                      label Contact Inforamtion
+                      p Alredy have an account ?
+                        a(href="#")  Log in
+                    span.floating-label Email or mobile phone number
+                    input.form-control(type="email" placeholder="Email or mobile phone number")
+                    .custom-control.custom-checkbox
+                      input.custom-control-input#keepMe(type="checkbox" name="keep-me")
+                      label.custom-control-label(for="#keepMe") 	Keep me up to date on news and exclusive offers
+                  .form-group
+                    label Shipping address
+                    .row
+                      .col-sm-6
+                        span.floating-label First name(optional)
+                        input.form-control(type="text" placeholder="First name(optional)")
+                      .col-sm-6
+                        span.floating-label Last name
+                        input.form-control(type="text" placeholder="Last name")
+                    span.floating-label Address
+                    input.form-control(type="text" placeholder="Address")
+                    span.floating-label Apartement, suite, etc. (optional)
+                    input.form-control(type="text" placeholder="apartement, suite, etc")
+                    span.floating-label City
+                    input.form-control(type="text" placeholder="City")
+                    .row
+                      .col-sm-6
+                        span.floating-label Country/Region
+                        select.select
+                          option(value="Indonesia") Indonesia
+                          option(value="Malaysia") Malaysia
+                          option(value="Singapore") Singapore
+                      .col-sm-6
+                        span.floating-label Postal Code
+                        input.form-control(type="text" placeholder="Postal code")
+                    .custom-control.custom-checkbox
+                      input.custom-control-input#saveInfo(type="checkbox" name="saveInfo")
+                      label.custom-control-label(for="#saveInfo") 	Save this information for next time
+                  .form-action
+                    a.btn.btn-link(href="cart.html") < Return to cart
+                    input.btn.btn-primary(type="submit" value="Continue to shipping")
+
+
+        .col-md-5
+          .checkout-r
+            .checkout-product-summary
+              .checkout-ps-item
+                .img-box(style="background-image: url(images/img-product-01.jpg)")
+                .text-box
+                  h4 Product 1
+                  span.detdesc S/Black
+                span.price $ 10.0
+              .checkout-voucher
+                form.form-inline
+                  .form-group
+                    input.form-control(placeholder="Discount code")
+                  button.btn.btn-grey Apply
+              .checkout-subtotal
+                ul
+                  li
+                    span Subtotal
+                    span $100.00
+                  li
+                    span Shipping
+                    span $0.3
+                  li.total-final
+                    span Total
+                    span
+                      small USD
+                      |  $739.00
+
+
+block footer

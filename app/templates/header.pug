@@ -8,9 +8,9 @@ header.header
         .col-lg-8.col-md-7
           nav.header-nav
             ul
-              li
+              li(class=activepage=="home"?"current-menu":"")
                 a(href="home.html") Home
-              li.has-child
+              li.has-child(class=activepage=="product"?"current-menu":"")
                 a(href="products.html") Catalog
                 .sub-menu
                   .row
@@ -63,7 +63,7 @@ header.header
                         .col-lg-6
                           .box-img
                             .img(style="background-image: url(images/img-product-01.jpg);")
-              li
+              li(class=activepage=="about"?"current-menu":"")
                 a(href="about.html") About
               //- li
               //-   a(href="#") Skin Care
@@ -71,16 +71,20 @@ header.header
               //-   a(href="#") Body Care
               //- li
               //-   a(href="#") Make Up
-              li
+              li(class=activepage=="contact"?"current-menu":"")
                 a(href="contact.html") Contact
         .col-lg-2.col-md-3
           .header-right
             ul
               li
                 a(href="#" style="background-image: url(images/heart-solid.svg)")
-              li
+              li.has-child
                 a(href="#" style="background-image: url(images/shopping-bag-solid.svg)")
-              li
+                //- .sub-menu
+                //-   ul
+                //-     li
+                //-       a(href="cart.html")
+              li.has-child
                 a(href="#" style="background-image: url(images/user-solid.svg)")
               li
                 a(href="#" style="background-image: url(images/search-solid.svg)")
