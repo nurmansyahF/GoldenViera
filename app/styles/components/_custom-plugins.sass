@@ -93,3 +93,30 @@
     &.show
       display: block
 
+.owl-carousel
+  position: relative
+  .owl-dots
+    text-align: center
+    position: relative
+    width: 100%
+    line-height: 8px
+    // padding-top: 48px
+    .owl-dot
+      display: inline-block
+      vertical-align: middle
+      margin-right: 15px
+      width: auto
+      position: relative
+      span
+        display: block
+        width: 10px
+        height: 10px
+        border-radius: 6px
+        background-color: #CECECE
+        border: 0
+      &:focus
+        outline: none !important
+      &.active
+        span
+          background-color: $primary
+          opacity: 1

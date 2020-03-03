@@ -40,7 +40,7 @@
           padding: 0 0 4px
           text-transform: uppercase
           font-size: 15px
-          font-weight: 600
+          font-weight: 700
           color: $text
           text-decoration: none
           transition: all .3s
@@ -57,27 +57,57 @@
     display: flex
     align-items: center
     position: relative
-    ul
+    & > ul
       padding: 0
       margin: 0
       display: flex
       justify-content: flex-end
       width: 100%
       position: relative
-    li
-      padding: 0 12px
-      text-align: center
-      &.has-child
-        a
-          &:after
-            display: none
-    a
-      display: inline-block
-      width: 14px
-      height: 14px
-      background-size: contain
-      background-repeat: no-repeat
-      background-position: center
+      & > li
+        padding: 0 12px
+        text-align: center
+        &.has-child
+          a
+            &:after
+              display: none
+        & > a
+          display: inline-block
+          width: 14px
+          height: 14px
+          background-size: contain
+          background-repeat: no-repeat
+          background-position: center
+    .sub-menu
+      max-width: 75% !important
+      padding: 20px !important
+    .dd-user
+      list-style: none
+      text-align: left
+      li
+        text-align: left
+        display: block
+        width: 100%
+        padding: 0
+        padding-left: 0px !important
+        &:before
+          display: inline-block
+          vertical-align: middle
+          width: 13px !important
+          height: 13px !important
+          margin-right: 10px
+          border: none !important
+          position: relative !important
+          top: auto !important
+          left: auto !important
+          +bgcontain
+        &.login
+          &:before
+            background-image: url(../images/sign-in-alt-solid.svg)
+        &.create
+          &:before
+            background-image: url(../images/user-solid.svg)
+
   .has-child
     &> a
       &:after
@@ -164,8 +194,101 @@
       &:hover
         .img
           transform: scale(1.1)
+  .cart
+    & > a
+      position: relative
+      & > span
+        opacity: 0
+        visibility: hidden
+        width: 16px
+        height: 16px
+        display: flex
+        text-align: center
+        border-radius: 50%
+        background-color: $primary
+        color: #ffffff
+        justify-content: center
+        align-items: center
+        font-size: 8px;
+        line-height: 8px;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    &-filled
+      & > a > span
+        opacity: 1
+        visibility: visible
+    .subm-cart
+      max-width: 350px !important
+      width: 350px !important
+      margin: auto
+      left: auto
+      right: 30%
+    &-cm-wrapper
+      border-bottom: 1px solid $border
+      margin-bottom: 10px
+      max-height: 180px
+      overflow-y: auto
+      padding-right: 3px
+    &-cm-item
+      padding-bottom: 10px
+      margin-bottom: 10px
+      border-bottom: 1px solid $border
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      margin-bottom: 15px
+      position: relative
+      &:last-child
+        margin-bottom: 0
+        border: none
+      .img-box
+        width: 70px
+        height: 70px
+        border: 1px solid $border
+        border-radius: 6px
+        +bgcover
+        margin-right: 10px
+      .text-box
+        width: calc(100% - 125px)
+        text-align: left
+      h4
+        font-size: 15px
+        line-height: 1em
+        margin-bottom: 0
+        font-weight: 600
+      .detdesc
+        font-size: 12px
+        font-weight: 600
+        display: block
+      .price
+        text-align: left
+        font-size: 14px
+        font-weight: 600
+        display: block
+      .close
+        width: 13px
+        height: 13px
+        position: absolute
+        top: 0
+        right: 0
+        color: $text
+        .svg
+          width: 13px
+          height: 13px
+        &:hover
+          color: $secondary
+    .summary
+      font-size: 18px
+      line-height: 1.5em
+      padding-bottom: 10px
+      font-weight: 700
+    .btn-primary
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
 
-  .subm-right
+
 
 
   .burger-icon
@@ -234,7 +357,7 @@
         flex-direction: column
         justify-content: flex-start
         align-items: flex-start
-        padding-top: 100px
+        padding-top: 30px
         &>li
           width: 100%
           margin-bottom: 8px
@@ -246,6 +369,9 @@
                 max-height: 999999px
     &-right
       padding-right: 30px
+      .sub-menu
+        width: 180px !important
+        max-width: 180px !important
     .sub-menu
       position: relative
       top: auto
@@ -259,15 +385,36 @@
         margin-bottom: 24px
     .burger-icon
       display: block
-
+    .sub-menu,
+    .subm-right
+      position: absolute !important
+    .has-child
+      &:hover
+        .sub-menu,
+        .subm-right
+          max-height: 99999px !important
+  +responsive(1500px, 0)
+    &-right
+      .sub-menu
+        max-width: 95% !important
   +mobile
     &-logo
       img
         max-height: 55px
     &-right
       margin-top: -25px
+
     .burger-icon
       top: -10px
+    .cart
+      .subm-cart
+        max-width: 290px !important
+        width: 290px !important
+        left: 0
+        right: 0
+        margin: auto
+
+
 .menu-open
   &:after
     content: ""
@@ -293,7 +440,7 @@
         width: 75%
   .header
     &-logo
-      z-index: 300
+      // z-index: 300
       position: relative
     &-nav
       display: block

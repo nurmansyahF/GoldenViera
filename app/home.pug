@@ -10,7 +10,7 @@ block content
         .slider
           .item.row
             .col-md-6
-              .text
+              .text.animate.fade-in-left.delay-4
                 h2 NEW ARRIVALS 2020
                 h3 Accessories
                 a.btn-wline(href="#") Shop Now
@@ -20,7 +20,7 @@ block content
 
           .item.row
             .col-md-6
-              .text
+              .text.animate.fade-in-left.delay-4
                 h2 NEW ARRIVALS 2020
                 h3 Cosmetics
                 a.btn-wline(href="#") Shop Now
@@ -29,7 +29,7 @@ block content
                 img(src="images/FPK-2018091818.jpg", alt="Img 01")
           .item.row
             .col-md-6
-              .text
+              .text.animate.fade-in-left.delay-4
                 h2 NEW ARRIVALS 2020
                 h3 Skin Care
                 a.btn-wline(href="#") Shop Now
@@ -39,30 +39,30 @@ block content
 
     .home-category
       .container
-        .row.justify-content-center
-          .col-md-2
+        .row.justify-content-center.slider-xs
+          .col-lg-2.col-md-4.animate.fade-in.delay
             .icon(style="background-image: url(images/icon-6.webp)")
             a.btn(href="#") CATEGORY 1
-          .col-md-2
+          .col-lg-2.col-md-4.animate.fade-in.delay
             .icon(style="background-image: url(images/icon-5.webp)")
             a.btn(href="#") CATEGORY 2
-          .col-md-2
+          .col-lg-2.col-md-4.animate.fade-in.delay
             .icon(style="background-image: url(images/icon-4.webp)")
             a.btn(href="#") CATEGORY 3
-          .col-md-2
+          .col-lg-2.col-md-4.animate.fade-in.delay
             .icon(style="background-image: url(images/icon-3.webp)")
             a.btn(href="#") CATEGORY 4
-          .col-md-2
+          .col-lg-2.col-md-4.animate.fade-in.delay
             .icon(style="background-image: url(images/icon-2.webp)")
             a.btn(href="#") CATEGORY 5
-          .col-md-2
+          .col-lg-2.col-md-4.animate.fade-in.delay
             .icon(style="background-image: url(images/icon-1.webp)")
             a.btn(href="#") CATEGORY 6
 
     .grid-banner
       .container-big
         .row.justify-content-center
-          .col-md-4
+          .col-lg-4.animate.fade-in.delay
             .item
               .banner(style="background-image: url(images/img-grid-banner-01.png);background-color: #94d8d6;")
               .text
@@ -75,14 +75,14 @@ block content
                 span.catpro 20% OFF
                 h3.catname(style="color: #000") ORGANIC CREAM
                 a.btn(href="#" style="background: #73984e") Shop Now
-          .col-md-4
+          .col-lg-4.animate.fade-in.delay
             .item.big
               .banner(style="background-image: url(images/img-grid-banner.png);background-color:#f8edec;")
               .text
                 span.catpro Big Million Offer
                 h3.catname(style="color: #e4635b") ORGANIC CREAM
                 a.btn(href="#" style="background: #d48c02") Shop Now
-          .col-md-4
+          .col-lg-4.animate.fade-in.delay
             .item
               .banner(style="background-image: url(images/img-grid-banner-02.png);background-color:#f9ced8;")
               .text
@@ -96,9 +96,9 @@ block content
                 h3.catname(style="color: #ca6786") ORGANIC CREAM
                 a.btn(href="#" style="background: #ce8f68") Shop Now
 
-    .home-product-slider
+    .home-product-slider.animate.fade-in
       .container-big
-        .heading-text
+        .heading-text.animate.fade-pop
           h2 Awesome & Unique Features
           p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
 
@@ -164,10 +164,10 @@ block content
                   h3 Lorem Ipsuem
                 .price $389.00
 
-    .trending-product(style="background-image: url(images/img-6.jpg)")
+    .trending-product.animate.fade-in(style="background-image: url(images/img-6.jpg)")
       .container
         .heading-text
-          h2 Awesome Trending Products
+          h2 Awesome <br>Trending Products
         .tab-custom
           ul.nav.nav-tabs
             li
@@ -334,7 +334,7 @@ block content
                       h3 Lorem Ipsuem
                     .price $389.00
 
-    .special-categories
+    .special-categories.animate.fade-in
       .container
         .heading-text
           h2 Special <br>Categories
@@ -370,7 +370,7 @@ block content
                 .qtt
                   span 11 items
 
-    .latest-news
+    .latest-news.animate.fade-in
       .container
         .heading-text
           h2 Our <br>Latest News
@@ -427,7 +427,7 @@ block content
                   a.btn.btn-primary(href="#") Read More
                   a.view
 
-    .brands-partner
+    .brands-partner.animate.fade-in
       .container
         .slider-bp
           .item
@@ -443,31 +443,35 @@ block content
           .item
             img(src="images/client-6_250x250.png", alt="Client6")
 
-    .our-services
+    .our-services.animate.fade-in
       .container-big
         .row
           .col-md-3
-            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .icon-box
+              img.svg.icon(src="images/shipping-fast-solid.svg")
             .box-text
               h3 Free Ship Worldwide
               p You will get free home delivery to the items in your cart on your first purchase
           .col-md-3
-            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .icon-box
+              img.svg.icon(src="images/gift-solid.svg")
             .box-text
               h3 Special Offers
               p Shop from our special offer day and get online shopping offers on multiple items.
           .col-md-3
-            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .icon-box
+              img.svg.icon(src="images/shield-alt-solid.svg")
             .box-text
               h3 Special Offers
               p Shop from our special offer day and get online shopping offers on multiple items.
           .col-md-3
-            .icon(style="background-image: url(images/dummy-icon.jpg)")
+            .icon-box
+              img.svg.icon(src="images/headset-solid.svg")
             .box-text
               h3 Special Offers
               p Shop from our special offer day and get online shopping offers on multiple items.
 
-    .our-newsletter
+    .our-newsletter.animate.fade-in
       .container
         .heading-text
           h2 Join Our <br>Newsletter
