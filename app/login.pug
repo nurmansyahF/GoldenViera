@@ -1,0 +1,17 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "about";
+
+block content
+  .about
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 Account
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Account
+    .login-wrapper
