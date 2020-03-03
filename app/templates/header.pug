@@ -78,14 +78,37 @@ header.header
             ul
               li
                 a(href="#" style="background-image: url(images/heart-solid.svg)")
-              li.has-child
+              li.has-child.cart.cart-filled
                 a(href="#" style="background-image: url(images/shopping-bag-solid.svg)")
-                //- .sub-menu
-                //-   ul
-                //-     li
-                //-       a(href="cart.html")
+                  span 0
+                .sub-menu.subm-cart.empty
+                  p.empty-text No Items in Cart
+                  //- .cart-mini
+                  //-   .cart-cm-wrapper
+                  //-     .cart-cm-item
+                  //-       .img-box(style="background-image: url(images/img-product-01.jpg)")
+                  //-       .text-box
+                  //-         h4 Product 1
+                  //-         span.detdesc S/Black
+                  //-         span.price $ 10.0 x 1
+                  //-       a.close(href="#")
+                  //-         img.svg(src="images/times-solid.svg")
+                  //-   .summary
+                  //-     p
+                  //-      span CART TOTAL:  $10.0
+                  //-   .cart-cm-action
+                  //-     a.btn.btn-primary(href="checkout.html") Checkout
+                  //-     a.btn.btn-primary(href="cart.html") View Cart
+
+
               li.has-child
                 a(href="#" style="background-image: url(images/user-solid.svg)")
+                .sub-menu
+                  ul.dd-user
+                    li.login
+                      a(href="#") Login
+                    li.create
+                      a(href="#") Create Account
               li
                 a(href="#" style="background-image: url(images/search-solid.svg)")
             .burger-icon
