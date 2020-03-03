@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "gulp-sass": "^3.0.0",
-    "sass": "^1.25.0",
+    "sass": "^1.26.2",
     "wiredep": "^3.0.0"
   }
 }
