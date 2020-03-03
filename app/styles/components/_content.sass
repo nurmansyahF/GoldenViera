@@ -76,6 +76,9 @@
           line-height: 1.1
           font-weight: bold
           color: #b4b4b4
+          width: auto
+          height: auto
+          background: transparent
         &.active
           border-bottom: 1px solid #4c834a
           span
@@ -255,6 +258,9 @@
       right: 0;
       position: absolute;
       z-index: -1;
+  +mobile
+    h2
+      font-size: 32px
 
 .home-product-slider
   padding: 90px 0
@@ -380,7 +386,7 @@
         padding: 58.8% 0
         display: block
   .tag-sale
-    display: inline-block
+    display: none
     position: absolute
     top: 0
     left: 0
@@ -452,6 +458,7 @@
   .box-img
     width: 100%
     position: relative
+    overflow: hidden
     .img
       width: 100%
       position: relative
@@ -462,6 +469,21 @@
         content: ""
         padding: 58.8% 0
         display: block
+    &:before
+      content: '';
+      position: absolute;
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(220, 233, 177,0.85) 100%);
+      background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(220, 233, 177,0.85) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(220, 233, 177,0.85) 100%);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 100%;
+      transition: all 0.3s linear
+      z-index: 3
+    &:hover
+      &:before
+        top: 0
   .box-text
     border: none
     padding: 20px
@@ -1034,6 +1056,19 @@
         img
           max-height: 178px
 
+      +maxtablet
+        .about-text
+          width: 100%
+          padding-top: 60px
+          h3
+            font-size: 22px
+        .about-logo
+          img
+            max-height: 100px
+      +mobile
+        .about-text
+          padding-top: 40px
+
     &-2
       padding: 80px 0
       .item-wwd
@@ -1100,6 +1135,16 @@
 .contact
   .contact-wrapper
     padding: 80px 0
+  .block-map
+    margin-bottom: 30px
+    .map
+      width: 100%;
+      height: 100%;
+      padding-top: 50%;
+      z-index: 1;
+    +mobile
+      .map
+          padding-top: 100%
   .item-contact
     width: 100%
     border: 1px solid $secondary
@@ -1109,15 +1154,24 @@
     align-items: center
     text-align: center
     margin-bottom: 24px
-    transition: all .3s ease
+    transition: all .5s ease
     flex-direction: column
     .icon
-      display: inline-block
+      display: flex
       width: 50px
       height: 50px
       border-radius: 50%
       background: $secondary
       margin-bottom: 20px
+      text-align: center
+      vertical-align: middle
+      color: #FFF
+      justify-content: center
+      align-items: center
+      transition: all 0.5s ease;
+      .svg
+        width: 20px
+        height: 20px
     h4
       font-weight: bold
     b
@@ -1129,6 +1183,8 @@
       margin-bottom: 0
     &:hover
       border-color: #000
+      .icon
+        background-color: #000
   .contact-form
     padding-top: 40px
     h3
@@ -1136,6 +1192,9 @@
       font-size: 36px
       line-height: 1.5em
       text-align: center
+    .form-control
+      height: auto
+      padding: 15px 20px;
 
 // Cart
 

@@ -68,7 +68,7 @@ main
         padding: 58.8% 0
         display: block
   .tag-sale
-    display: inline-block
+    display: none
     position: absolute
     top: 0
     left: 0
@@ -91,6 +91,9 @@ main
       font-weight: 600
     .price
       font-weight: bold
+  &.has-sale
+    .tag-sale
+      display: inline-block
 
 .tab-pane
   display: none
@@ -99,3 +102,101 @@ main
   &.active
     display: block
     opacity: 1
+
+//Box action product
+.box-action
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1
+  opacity: 0
+  transition: all .5s ease-in-out;
+  background-color: #faf9ff
+  transform-origin: 0 0;
+  display: flex
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-around
+  .action
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    z-index: 3;
+  .icon
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    border-radius: 50%;
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    padding: 0;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    .svg
+      width: 14px
+      height: 14px
+    &:hover
+      background: $primary;
+      color: #ffffff;
+  .img.overlay
+    width: 300px !important
+    max-width: 100% !important
+    margin: 30px
+    &:before
+      padding: 39% 0 !important
+  .btn-primary
+    text-align: center
+    width: 80%
+    margin: 0 auto
+    align-self: flex-end
+.item,
+.item-prdct
+  .box-img:hover
+    cursor: pointer
+    .box-action
+      height: 100%
+      opacity: 1
+
+// Star
+.star
+  margin-bottom: 8px
+  color: $text
+  i
+    display: inline-block
+    width: 13px
+    height: 13px
+    margin-right: 3px
+    &:last-child
+      margin-right: 0
+  &.stared
+    &-1
+      i:nth-child(1)
+        color: $primary
+    &-2
+      i
+        &:nth-child(1),
+        &:nth-child(2)
+          color: $primary
+    &-3
+      i
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3)
+          color: $primary
+    &-5
+      i
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4)
+          color: $primary     
+    &-5
+      i
+        color: $primary

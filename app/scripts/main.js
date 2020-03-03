@@ -162,7 +162,8 @@
                 items: 2
               },
               768:{
-                items: 2
+                items: 4,
+                margin: 20
               }
             }
           })

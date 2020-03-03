@@ -16,10 +16,14 @@ block content
               span Contact
     .contact-wrapper
       .container
+        .block-map.animate.fade-inb
+          #map.map
         .row
-          .col-md-4
+          .col-md-4.animate.fade-in-right.delay
             .item-contact
               .icon
+                i
+                  img.svg(src="images/phone-solid.svg")
               h4 PHONE
               p
                 b Toll-Free
@@ -27,9 +31,11 @@ block content
               p
                 b Fax
                 a(href="tel:0312345869") 031-234-5869
-          .col-md-4
+          .col-md-4.animate.fade-in-right.delay
             .item-contact
               .icon
+                i
+                  img.svg(src="images/envelope-solid.svg")
               h4 EMAIL
               p
                 b email
@@ -37,14 +43,16 @@ block content
               p
                 b Fax
                 a(href="mailto:support@email.com") support@email.com
-          .col-md-4
+          .col-md-4.animate.fade-in-right.delay
             .item-contact
               .icon
+                i
+                  img.svg(src="images/location-arrow-solid.svg")
               h4 ADDRESS
               p No: 58 A, East Madison Street, <br>Baltimore, MD, USA 4508
         .row.justify-content-center
           .col-md-6
-            .contact-form
+            .contact-form.animate.fade-inb
               h3 Contact Form
               form(action="")
                 .form-group
@@ -62,3 +70,43 @@ block content
                   textarea.form-control(placeholder="Message" rows="7")
                 .form-action
                   button.btn.btn-primary(type="submit") Send
+
+
+block addscript
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpI7N7Fja16AAhUGiqh51_I9PFR42ZDq4&callback=initMap")
+  script.
+    function initMap() {
+      var latlang = {lat: -7.336322, lng: 112.797627};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: {lat: -7.336322, lng: 112.797627},
+        mapTypeControlOptions: {
+          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
+        }
+      });
+
+      var stylez = [
+        {
+          featureType: "all",
+          elementType: "all",
+          stylers: [
+            { saturation: -100 }
+          ]
+        }
+      ];
+
+      var marker = new google.maps.Marker({
+        position: latlang,
+        map: map,
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+
+
+      //- var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });
+      //- map.mapTypes.set('tehgrayz', mapType);
+      //- map.setMapTypeId('tehgrayz');
+    }

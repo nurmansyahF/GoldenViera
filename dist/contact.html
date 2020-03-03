@@ -120,26 +120,29 @@
           </div>
           <div class="contact-wrapper">
             <div class="container">
+              <div class="block-map animate fade-inb">
+                <div class="map" id="map"></div>
+              </div>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 animate fade-in-right delay">
                   <div class="item-contact">
-                    <div class="icon"></div>
+                    <div class="icon"><i><img class="svg" src="images/phone-solid.svg"/></i></div>
                     <h4>PHONE</h4>
                     <p><b>Toll-Free</b><a href="tel:0312345869">031-234-5869</a></p>
                     <p><b>Fax</b><a href="tel:0312345869">031-234-5869</a></p>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate fade-in-right delay">
                   <div class="item-contact">
-                    <div class="icon"></div>
+                    <div class="icon"><i><img class="svg" src="images/envelope-solid.svg"/></i></div>
                     <h4>EMAIL</h4>
                     <p><b>email</b><a href="mailto:cs@email.com">cs@email.com</a></p>
                     <p><b>Fax</b><a href="mailto:support@email.com">support@email.com</a></p>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 animate fade-in-right delay">
                   <div class="item-contact">
-                    <div class="icon"></div>
+                    <div class="icon"><i><img class="svg" src="images/location-arrow-solid.svg"/></i></div>
                     <h4>ADDRESS</h4>
                     <p>No: 58 A, East Madison Street, <br>Baltimore, MD, USA 4508</p>
                   </div>
@@ -147,7 +150,7 @@
               </div>
               <div class="row justify-content-center">
                 <div class="col-md-6">
-                  <div class="contact-form">
+                  <div class="contact-form animate fade-inb">
                     <h3>Contact Form</h3>
                     <form action="">
                       <div class="form-group">
@@ -225,5 +228,43 @@
     <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpI7N7Fja16AAhUGiqh51_I9PFR42ZDq4&amp;callback=initMap"></script>
+    <script>
+      function initMap() {
+        var latlang = {lat: -7.336322, lng: 112.797627};
+      
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: -7.336322, lng: 112.797627},
+          mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
+          }
+        });
+      
+        var stylez = [
+          {
+            featureType: "all",
+            elementType: "all",
+            stylers: [
+              { saturation: -100 }
+            ]
+          }
+        ];
+      
+        var marker = new google.maps.Marker({
+          position: latlang,
+          map: map,
+        });
+      
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      
+      
+        //- var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });
+        //- map.mapTypes.set('tehgrayz', mapType);
+        //- map.setMapTypeId('tehgrayz');
+      }
+    </script>
   </body>
 </html>
