@@ -21,6 +21,31 @@ block content
             h3.cart-title PRODUCTS
             .cart-item-wrapper
               .cart-item
+                a.remove(href="#")
+                  i
+                    img.svg(src="images/times-solid.svg")
+                .img-box(style="background-image: url(images/img-product-01.jpg)")
+                .text-box
+                  h4 Product 1
+                  span.detdesc S/Black
+                  span.price $ 10.0
+                  .total-item
+                    .form-group.qty
+                      a.btn-number.min(href="#" data-type="minus" data-field="quant[1]")
+                        i
+                          img.svg(src="images/minus-solid.svg")
+                      input.type-hidden(type="hidden" name="size" value="300")
+                      input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="0" max="20")
+                      a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]")
+                        i
+                          img.svg(src="images/plus-solid.svg")
+                  span.total-price
+                    b Total:
+                    | $ 10.0
+              .cart-item
+                a.remove(href="#")
+                  i
+                    img.svg(src="images/times-solid.svg")
                 .img-box(style="background-image: url(images/img-product-01.jpg)")
                 .text-box
                   h4 Product 1
@@ -41,7 +66,7 @@ block content
                     | $ 10.0
 
             .cart-item-action
-              a.btn.btn-primary(href="#") Continue shopping
+              a.btn.btn-primary(href="products.html") Continue shopping
               a.btn.btn-primary(href="#") Update Cart
 
           .col-md-4
@@ -50,9 +75,12 @@ block content
               .subtotal
                 label Subtotal
                 span $ 100.00
-              a.note(href="#") Add note
+              a.note Add a note to your order
+              .form-group.hidden
+                textarea.form-control(row="4")
               p Shipping, taxes, and discounts will be calculated at checkout.
-              input.btn.btn-primary.btn-block(href="#" type="submit" value="Proceed to Checkout")
+              a.btn.btn-primary.btn-block(href="checkout.html") Proceed to Checkout
+              //- input.btn.btn-primary.btn-block(href="#" type="submit" value="Proceed to Checkout")
 
             .cart-get-shipping
               h3.cart-title GET SHIPPING ESTIMATES
@@ -73,6 +101,6 @@ block content
                   label Postal/ Zip Code
                   input.form-control(type="text")
                 .form-action
-                  input.btn.btn-primary.btn-block(href="#" type="submit" value="Proceed to Checkout")
+                  input.btn.btn-primary.btn-block(href="#" type="submit" value="Calculate Shipping")
 
 

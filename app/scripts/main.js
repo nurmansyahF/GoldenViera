@@ -83,9 +83,63 @@
         $('body').on('click','.header_bg',function(){
             $('body').removeClass('menu-open');
         });
+        function imgZoom(){
+          $('#zoom_1').ezPlus();
+        }imgZoom();
 
-        //SLIDER
-    $('.slider').each(function(){
+      $('.thumbnail').each(function(){
+        var t = $(this),
+            bimg = t.find('.box-img');
+
+        bimg.each(function(){
+          var img = $(this).find('.img'),
+              dimg = img.data('img');
+          $(this).click(function(){
+            bimg.removeClass('active');
+            $(this).addClass('active');
+            $('#zoom_1').attr('src', dimg);
+            imgZoom();
+          })
+        })
+      })
+      $('.cart-item').each(function(){
+        var t = $(this),
+            r = t.find('.remove');
+        r.click(function(){
+          $(this).parents('.cart-item').remove();
+        })
+      })
+      $('.note').each(function(){
+        $(this).click(function(){
+          $(this).addClass('hidden');
+          $(this).next('.form-group.hidden').addClass('show');
+        })
+      })
+
+      $('.form-checkout').each(function(){
+        var t = $(this),
+            fc = t.find('.form-control');
+        fc.each(function(){
+          var s = $(this).prev('.floating-label');
+          $(this).on("change paste keyup", function(){
+            if($(this).val() !=""){
+              $(this).addClass('filled');
+              s.addClass('show');
+            }else{
+              $(this).removeClass('filled');
+              s.removeClass('show')
+            }
+          })
+          
+          $(this).focus(function() {
+            // s.toggleClass('show');
+          }
+          );
+        })
+      })
+
+      //SLIDER
+      $('.slider').each(function(){
         var t = $(this),
             nItem = t.children().length;
 

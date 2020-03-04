@@ -19,22 +19,53 @@ block content
         .row
           .col-lg-3
             .side-filter
-              .sec-filter
-                h4 Shop By Type
-                .filter-type
-                  ul
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="type1" name="customRadio")
-                      label.custom-control-label(for="type1") Perfume
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="type2" name="customRadio")
-                      label.custom-control-label(for="type2") Face Mask
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="type3" name="customRadio")
-                      label.custom-control-label(for="type3") Makeup Brush
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="type3" name="customRadio")
-                      label.custom-control-label(for="type3") Foundation Powder
+              h4 Shop By Type
+              .filter-ec
+                ul.ec-wrapper#ec-filter
+                  li.card
+                    div.card-header#ec1-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec1-content" aria-expanded="true" aria-controls="ec1") Eye Makeup
+                    .collapse.how#ec1-content(aria-labelledby="#ec1-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Makeup 1
+                        li
+                          a(href="#") Makeup 2
+                        li
+                          a(href="#") Makeup 3
+                  li.card
+                    div.card-header#ec2-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec2-content" aria-expanded="true" aria-controls="ec2") Soap
+                    .collapse.how#ec2-content(aria-labelledby="#ec2-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Soap 1
+                        li
+                          a(href="#") Soap 2
+                        li
+                          a(href="#") Soap 3
+                  li.card
+                    div.card-header#ec3-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec3-content" aria-expanded="true" aria-controls="ec2") Liquid Soap
+                    .collapse.how#ec3-content(aria-labelledby="#ec3-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Liquid Soap 1
+                        li
+                          a(href="#") Liquid Soap 2
+                        li
+                          a(href="#") Liquid Soap 3
+                  li.card
+                    div.card-header#ec2-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec2-content" aria-expanded="true" aria-controls="ec2") Soap Pasta
+                    .collapse.how#ec2-content(aria-labelledby="#ec2-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Soap Pasta 1
+                        li
+                          a(href="#") Soap Pasta 2
+                        li
+                          a(href="#") Soap Pasta 3
               .sec-filter
                 h4 Hot Deals
                 .best-seller.slider-hd
@@ -44,7 +75,17 @@ block content
                       .box-img
                         .img(style="background-image: url(images/img-product-01.jpg);")
                       .desc
-                        .star
+                        .star.stared-5
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                         .name
                           h3 Lorem Ipsuem 1
                         .price $389.00
@@ -54,7 +95,17 @@ block content
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
                         .desc
-                          .star
+                          .star.stared-5
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
                             h3 Lorem Ipsuem 2
                           .price $389.00
@@ -64,37 +115,55 @@ block content
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
                         .desc
-                          .star
+                          .star.stared-5
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
                             h3 Lorem Ipsuem 3
                           .price $389.00
                   .item-prdct
-                      a(href="#")
-                        //- span.tag-sale Sale
-                        .box-img
-                          .img(style="background-image: url(images/img-product-01.jpg);")
-                        .desc
-                          .star
-                          .name
-                            h3 Lorem Ipsuem 4
-                          .price $389.00
+                    a(href="#")
+                      .box-img
+                        .img(style="background-image: url(images/img-product-01.jpg);")
+                      .desc
+                        .star.stared-5
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                        .name
+                          h3 Lorem Ipsuem 4
+                        .price $389.00
 
 
           .col-lg-9
             .products-single-wrap.row
               .col-md-6
                 .box-img.big-detail
-                  .img(style="background-image: url(images/img-product-01.jpg);")
+                  img#zoom_1(src="images/img-01.jpg" width="397px")
+                  //- .img(style="background-image: url(images/img-product-01.jpg);")
+                  
                 .thumbnail
-                  a(href="#")
-                    .box-img
-                      .img(style="background-image: url(images/img-product-01.jpg);")
-                  a(href="#")
-                    .box-img
-                      .img(style="background-image: url(images/img-product-01.jpg);")
-                  a(href="#")
-                    .box-img
-                      .img(style="background-image: url(images/img-product-01.jpg);")
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);" data-img="images/img-product-01.jpg")
+                  .box-img
+                    .img(style="background-image: url(images/FPK-2018091546.jpg);" data-img="images/FPK-2018091546.jpg")
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);" data-img="images/img-product-01.jpg")
               .col-md-6
                 .details
                   h2 Product 1
@@ -125,14 +194,22 @@ block content
                     dt
                       label Quantity:
                     dd
-                      p asdf
+                      .form-group.qty
+                        a.btn-number.min(href="#" data-type="minus" data-field="quant[1]")
+                          i
+                            img.svg(src="images/minus-solid.svg")
+                        input.type-hidden(type="hidden" name="size" value="300")
+                        input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="0" max="20")
+                        a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]")
+                          i
+                            img.svg(src="images/plus-solid.svg")
                     dt
                       label Subtotal:
                     dd
                       .price $600.00
                   .pd-action
-                    button.btn
-                      span Add to chart
+                    a.btn(href="cart.html")
+                        span Add to chart
                     button.btn.btn-transparent
                       span Add to whislist
                     button.btn.btn-block.btn-transparent
@@ -220,56 +297,203 @@ block content
                   .heading-text
                     h2 Related <br>Products
                   .slider-relprdct
-                    .item-prdct
+                    .item-prdct.has-sale
                       a(href="#")
-                        //- span.tag-sale Sale
+                        span.tag-sale Sale
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
+                          .box-action
+                            .action
+                              a.cart(href="#")
+                                i.icon
+                                  img.svg(src="images/shopping-cart-solid.svg")
+                              a.link(href="products-single.html")
+                                i.icon
+                                  img.svg(src="images/link-solid.svg")
+                              a.like(href="#")
+                                i.icon
+                                  img.svg(src="images/heart-regular.svg")
+                            .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
+                            a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                         .desc
                           .star
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
-                            h3 Lorem Ipsuem 1
+                            h3 Lorem Ipsuem
                           .price $389.00
-
-                    .item-prdct
+                    .item-prdct.has-sale
                       a(href="#")
-                        //- span.tag-sale Sale
+                        span.tag-sale Sale
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
+                          .box-action
+                            .action
+                              a.cart(href="#")
+                                i.icon
+                                  img.svg(src="images/shopping-cart-solid.svg")
+                              a.link(href="products-single.html")
+                                i.icon
+                                  img.svg(src="images/link-solid.svg")
+                              a.like(href="#")
+                                i.icon
+                                  img.svg(src="images/heart-regular.svg")
+                            .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
+                            a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                         .desc
                           .star
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
-                            h3 Lorem Ipsuem 1
+                            h3 Lorem Ipsuem
                           .price $389.00
-                    .item-prdct
+                    .item-prdct.has-sale
                       a(href="#")
-                        //- span.tag-sale Sale
+                        span.tag-sale Sale
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
+                          .box-action
+                            .action
+                              a.cart(href="#")
+                                i.icon
+                                  img.svg(src="images/shopping-cart-solid.svg")
+                              a.link(href="products-single.html")
+                                i.icon
+                                  img.svg(src="images/link-solid.svg")
+                              a.like(href="#")
+                                i.icon
+                                  img.svg(src="images/heart-regular.svg")
+                            .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
+                            a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                         .desc
                           .star
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
-                            h3 Lorem Ipsuem 1
+                            h3 Lorem Ipsuem
                           .price $389.00
-                    .item-prdct
+                    .item-prdct.has-sale
                       a(href="#")
-                        //- span.tag-sale Sale
+                        span.tag-sale Sale
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
+                          .box-action
+                            .action
+                              a.cart(href="#")
+                                i.icon
+                                  img.svg(src="images/shopping-cart-solid.svg")
+                              a.link(href="products-single.html")
+                                i.icon
+                                  img.svg(src="images/link-solid.svg")
+                              a.like(href="#")
+                                i.icon
+                                  img.svg(src="images/heart-regular.svg")
+                            .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
+                            a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                         .desc
                           .star
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
-                            h3 Lorem Ipsuem 1
+                            h3 Lorem Ipsuem
                           .price $389.00
-                    .item-prdct
+                    .item-prdct.has-sale
                       a(href="#")
-                        //- span.tag-sale Sale
+                        span.tag-sale Sale
                         .box-img
                           .img(style="background-image: url(images/img-product-01.jpg);")
+                          .box-action
+                            .action
+                              a.cart(href="#")
+                                i.icon
+                                  img.svg(src="images/shopping-cart-solid.svg")
+                              a.link(href="products-single.html")
+                                i.icon
+                                  img.svg(src="images/link-solid.svg")
+                              a.like(href="#")
+                                i.icon
+                                  img.svg(src="images/heart-regular.svg")
+                            .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
+                            a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                         .desc
                           .star
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
                           .name
-                            h3 Lorem Ipsuem 1
+                            h3 Lorem Ipsuem
+                          .price $389.00
+                    .item-prdct.has-sale
+                      a(href="#")
+                        span.tag-sale Sale
+                        .box-img
+                          .img(style="background-image: url(images/img-product-01.jpg);")
+                          .box-action
+                            .action
+                              a.cart(href="#")
+                                i.icon
+                                  img.svg(src="images/shopping-cart-solid.svg")
+                              a.link(href="products-single.html")
+                                i.icon
+                                  img.svg(src="images/link-solid.svg")
+                              a.like(href="#")
+                                i.icon
+                                  img.svg(src="images/heart-regular.svg")
+                            .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
+                            a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
+                        .desc
+                          .star
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                            i
+                              img.svg(src="images/star-solid.svg")
+                          .name
+                            h3 Lorem Ipsuem
                           .price $389.00
 
                 .recently

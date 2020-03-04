@@ -124,7 +124,19 @@
                 <div class="col-md-8">
                   <h3 class="cart-title">PRODUCTS</h3>
                   <div class="cart-item-wrapper">
-                    <div class="cart-item">
+                    <div class="cart-item"><a class="remove" href="#"><i><img class="svg" src="images/times-solid.svg"/></i></a>
+                      <div class="img-box" style="background-image: url(images/img-product-01.jpg)"></div>
+                      <div class="text-box">
+                        <h4>Product 1</h4><span class="detdesc">S/Black</span><span class="price">$ 10.0</span>
+                        <div class="total-item">
+                          <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[1]"><i><img class="svg" src="images/minus-solid.svg"/></i></a>
+                            <input class="type-hidden" type="hidden" name="size" value="300"/>
+                            <input class="form-control input-number" type="number" placeholder="" name="quant[1]" value="1" min="0" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[1]"><i><img class="svg" src="images/plus-solid.svg"/></i></a>
+                          </div>
+                        </div><span class="total-price"><b>Total:</b>$ 10.0</span>
+                      </div>
+                    </div>
+                    <div class="cart-item"><a class="remove" href="#"><i><img class="svg" src="images/times-solid.svg"/></i></a>
                       <div class="img-box" style="background-image: url(images/img-product-01.jpg)"></div>
                       <div class="text-box">
                         <h4>Product 1</h4><span class="detdesc">S/Black</span><span class="price">$ 10.0</span>
@@ -137,16 +149,18 @@
                       </div>
                     </div>
                   </div>
-                  <div class="cart-item-action"><a class="btn btn-primary" href="#">Continue shopping</a><a class="btn btn-primary" href="#">Update Cart</a></div>
+                  <div class="cart-item-action"><a class="btn btn-primary" href="products.html">Continue shopping</a><a class="btn btn-primary" href="#">Update Cart</a></div>
                 </div>
                 <div class="col-md-4">
                   <div class="cart-order-summary">
                     <h3 class="cart-title">ORDER SUMMARY</h3>
                     <div class="subtotal">
                       <label>Subtotal</label><span>$ 100.00</span>
-                    </div><a class="note" href="#">Add note</a>
-                    <p>Shipping, taxes, and discounts will be calculated at checkout.</p>
-                    <input class="btn btn-primary btn-block" href="#" type="submit" value="Proceed to Checkout"/>
+                    </div><a class="note">Add a note to your order</a>
+                    <div class="form-group hidden">
+                      <textarea class="form-control" row="4"></textarea>
+                    </div>
+                    <p>Shipping, taxes, and discounts will be calculated at checkout.</p><a class="btn btn-primary btn-block" href="checkout.html">Proceed to Checkout</a>
                   </div>
                   <div class="cart-get-shipping">
                     <h3 class="cart-title">GET SHIPPING ESTIMATES</h3>
@@ -172,7 +186,7 @@
                         <input class="form-control" type="text"/>
                       </div>
                       <div class="form-action">
-                        <input class="btn btn-primary btn-block" href="#" type="submit" value="Proceed to Checkout"/>
+                        <input class="btn btn-primary btn-block" href="#" type="submit" value="Calculate Shipping"/>
                       </div>
                     </form>
                   </div>
@@ -243,6 +257,7 @@
     <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/igorlino/elevatezoom-plus@1.2.3/src/jquery.ez-plus.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

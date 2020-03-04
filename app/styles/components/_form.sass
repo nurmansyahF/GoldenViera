@@ -1,6 +1,14 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* Form */
 /* ------------------------------------------------------------------------------------------------ */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+input[type=number]
+  -moz-appearance: textfield
+
+
 
 // Bootstrap Style form
 .custom-control
@@ -200,6 +208,10 @@
     &:hover
       outline: none
       border-color: $secondary
+  textarea.form-control
+    padding: 10px 15px
+    height: auto
+    min-height: 100px
 
 
 .form-action
