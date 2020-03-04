@@ -31,6 +31,18 @@ html(lang="en")
         include footer.pug
 
     block modal
+      #modalSearch.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalSearch' aria-hidden='true')
+        .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+          .modal-content
+            a.close(href="#" data-dismiss="modal")
+              img.svg(src="images/times-solid.svg")
+            form.search-form
+              input.form-control(type="text" placeholder="Search")
+              button(typ="submit")
+                i
+                  img.svg(src="images/search-solid.svg")
+
+    block modalLocal
 
     block script
       script(src="plugins/jquery-3.4.1.min.js")

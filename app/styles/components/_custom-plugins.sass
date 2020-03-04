@@ -120,3 +120,384 @@
         span
           background-color: $primary
           opacity: 1
+
+// Collapse
+
+.fade
+  opacity: 0
+  transition: opacity 0.15s linear
+
+  &.show
+    opacity: 1
+
+.collapse
+  display: none
+
+  &.show
+    display: block
+
+tr.collapse.show
+  display: table-row
+
+tbody.collapse.show
+  display: table-row-group
+
+.collapsing
+  position: relative
+  height: 0
+  overflow: hidden
+  transition: height 0.35s ease
+
+.dropup, .dropdown
+  position: relative
+
+.dropdown-toggle
+  &::after
+    display: inline-block
+    width: 0
+    height: 0
+    margin-left: 0.255em
+    vertical-align: 0.255em
+    content: ""
+    border-top: 0.3em solid
+    border-right: 0.3em solid transparent
+    border-bottom: 0
+    border-left: 0.3em solid transparent
+
+  &:empty::after
+    margin-left: 0
+
+.dropdown-menu
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 1000
+  display: none
+  float: left
+  min-width: 10rem
+  padding: 0.5rem 0
+  margin: 0.125rem 0 0
+  font-size: 1rem
+  color: #212529
+  text-align: left
+  list-style: none
+  background-color: #fff
+  background-clip: padding-box
+  border: 1px solid rgba(0, 0, 0, 0.15)
+  border-radius: 0.25rem
+
+.dropup
+  .dropdown-menu
+    margin-top: 0
+    margin-bottom: 0.125rem
+
+  .dropdown-toggle
+    &::after
+      display: inline-block
+      width: 0
+      height: 0
+      margin-left: 0.255em
+      vertical-align: 0.255em
+      content: ""
+      border-top: 0
+      border-right: 0.3em solid transparent
+      border-bottom: 0.3em solid
+      border-left: 0.3em solid transparent
+
+    &:empty::after
+      margin-left: 0
+
+.dropright
+  .dropdown-menu
+    margin-top: 0
+    margin-left: 0.125rem
+
+  .dropdown-toggle
+    &::after
+      display: inline-block
+      width: 0
+      height: 0
+      margin-left: 0.255em
+      vertical-align: 0.255em
+      content: ""
+      border-top: 0.3em solid transparent
+      border-bottom: 0.3em solid transparent
+      border-left: 0.3em solid
+
+    &:empty::after
+      margin-left: 0
+
+    &::after
+      vertical-align: 0
+
+.dropleft
+  .dropdown-menu
+    margin-top: 0
+    margin-right: 0.125rem
+
+  .dropdown-toggle
+    &::after
+      display: inline-block
+      width: 0
+      height: 0
+      margin-left: 0.255em
+      vertical-align: 0.255em
+      content: ""
+      display: none
+
+    &::before
+      display: inline-block
+      width: 0
+      height: 0
+      margin-right: 0.255em
+      vertical-align: 0.255em
+      content: ""
+      border-top: 0.3em solid transparent
+      border-right: 0.3em solid
+      border-bottom: 0.3em solid transparent
+
+    &:empty::after
+      margin-left: 0
+
+    &::before
+      vertical-align: 0
+
+.dropdown-divider
+  height: 0
+  margin: 0.5rem 0
+  overflow: hidden
+  border-top: 1px solid #e9ecef
+
+.dropdown-item
+  display: block
+  width: 100%
+  padding: 0.25rem 1.5rem
+  clear: both
+  font-weight: 400
+  color: #212529
+  text-align: inherit
+  white-space: nowrap
+  background-color: transparent
+  border: 0
+
+  &:hover, &:focus
+    color: #16181b
+    text-decoration: none
+    background-color: #f8f9fa
+
+  &.active, &:active
+    color: #fff
+    text-decoration: none
+    background-color: #007bff
+
+  &.disabled, &:disabled
+    color: #6c757d
+    background-color: transparent
+
+.dropdown-menu.show
+  display: block
+
+.dropdown-header
+  display: block
+  padding: 0.5rem 1.5rem
+  margin-bottom: 0
+  font-size: 0.875rem
+  color: #6c757d
+  white-space: nowrap
+
+
+
+// Modal Bootsrap
+.tooltip
+  position: relative
+  .arrow
+    position: absolute
+    width: 0
+    height: 0
+    border-color: transparent
+    border-style: solid
+    bottom: 0
+    left: 50%
+    margin-left: -5px
+    border-width: 20px 15px 0
+    border-top-color: #212121
+    margin-bottom: 19px
+  &-inner
+    background: #212121
+    color: #ffffff
+    font-size: 15px
+    line-height: 24px
+    padding: 19px 24px
+    border-radius: 4px
+    max-width: 280px
+    margin-bottom: 38px
+
+.fade
+  transition: opacity 0.15s linear
+
+.fade:not(.in):not(.show)
+  display: none
+
+
+.collapse:not(.show)
+  display: none
+
+.collapsing
+  position: relative
+  height: 0
+  overflow: hidden
+  transition: height 0.35s ease
+
+@media (prefers-reduced-motion: reduce)
+  .collapsing
+    transition: none
+.modal-open
+  overflow: hidden
+
+.modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1050
+  display: none
+  overflow: hidden
+  outline: 0
+
+.modal-open .modal
+  overflow-x: hidden
+  overflow-y: auto
+
+.modal-dialog
+  position: relative
+  width: auto
+  margin: 0.5rem
+  pointer-events: none
+
+.modal
+  &.fade .modal-dialog
+    transition: -webkit-transform 0.3s ease-out
+    transition: transform 0.3s ease-out
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out
+    -webkit-transform: translate(0, -25%)
+    transform: translate(0, -25%)
+
+  &.show .modal-dialog
+    -webkit-transform: translate(0, 0)
+    transform: translate(0, 0)
+
+.modal-dialog-centered
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  min-height: calc(100% - (0.5rem * 2))
+
+.modal-content
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  width: 100%
+  pointer-events: auto
+  background-color: #fff
+  background-clip: padding-box
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  border-radius: 0.3rem
+  outline: 0
+
+.modal-backdrop
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1040
+  background-color: #000
+
+  &.fade
+    opacity: 0
+
+  &.show
+    opacity: 0.5
+
+.modal-header
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  padding: 1rem
+  border-bottom: 1px solid #e9ecef
+  border-top-left-radius: 0.3rem
+  border-top-right-radius: 0.3rem
+
+  .close
+    padding: 1rem
+    margin: -1rem -1rem -1rem auto
+
+.modal-title
+  margin-bottom: 0
+  line-height: 1.5
+
+.modal-body
+  position: relative
+  -webkit-box-flex: 1
+  -ms-flex: 1 1 auto
+  flex: 1 1 auto
+  padding: 1rem
+
+.modal-footer
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: end
+  -ms-flex-pack: end
+  justify-content: flex-end
+  padding: 1rem
+  border-top: 1px solid #e9ecef
+
+  >
+    \:not(:first-child)
+      margin-left: .25rem
+
+    \:not(:last-child)
+      margin-right: .25rem
+
+.modal-scrollbar-measure
+  position: absolute
+  top: -9999px
+  width: 50px
+  height: 50px
+  overflow: scroll
+
+@media (min-width: 576px)
+  .modal-dialog
+    max-width: 500px
+    margin: 1.75rem auto
+
+  .modal-dialog-centered
+    min-height: calc(100% - (1.75rem * 2))
+
+  .modal-sm
+    max-width: 300px
+
+@media (min-width: 992px)
+  .modal-lg
+    max-width: 800px
+
+

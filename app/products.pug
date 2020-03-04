@@ -19,42 +19,72 @@ block content
         .row
           .col-lg-3
             .side-filter
-              //- h4 Category
-              //- .filter-ec
-              //-   ul.ec-wrapper#ec-filter
-              //-     li.card
-              //-       div.card-header#ec1-heading
-              //-         a(href="#" data-toggle="collapse" data-target="#ec1-content" aria-expanded="true" aria-controls="ec1") Eye Makeup
-              //-       .collapse.how#ec1-content(aria-labelledby="#ec1-content" data-parent="#ec-filter")
-              //-         p content
-              .sec-filter
-                h4 Shop By Price
+              h4 Category
+              .filter-ec
+                ul.ec-wrapper#ec-filter
+                  li.card
+                    div.card-header#ec1-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec1-content" aria-expanded="true" aria-controls="ec1") Eye Makeup
+                    .collapse.how#ec1-content(aria-labelledby="#ec1-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Makeup 1
+                        li
+                          a(href="#") Makeup 2
+                        li
+                          a(href="#") Makeup 3
+                  li.card
+                    div.card-header#ec2-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec2-content" aria-expanded="true" aria-controls="ec2") Soap
+                    .collapse.how#ec2-content(aria-labelledby="#ec2-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Soap 1
+                        li
+                          a(href="#") Soap 2
+                        li
+                          a(href="#") Soap 3
+                  li.card
+                    div.card-header#ec3-heading
+                      a.collapsed(href="#" data-toggle="collapse" data-target="#ec3-content" aria-expanded="true" aria-controls="ec2") Liquid Soap
+                    .collapse.how#ec3-content(aria-labelledby="#ec3-content" data-parent="#ec-filter")
+                      ul
+                        li
+                          a(href="#") Liquid Soap 1
+                        li
+                          a(href="#") Liquid Soap 2
+                        li
+                          a(href="#") Liquid Soap 3
+              .sec-filter#price-heading
+                h4.coll-h(data-toggle="collapse" data-target="#price-content" aria-expanded="true" aria-controls="price") Shop By Price
                 .filter-price
-                  ul
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="price1" name="customRadio")
-                      label.custom-control-label(for="price1") $100 - $200
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="price2" name="customRadio")
-                      label.custom-control-label(for="price2") $200 - $300
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="price3" name="customRadio")
-                      label.custom-control-label(for="price3") $300 - $500
-                    li.custom-control.custom-radio
-                      input.custom-control-input(type="radio" id="price4" name="customRadio")
-                      label.custom-control-label(for="price4") $700 - $1000
-              .filter.sec-filter
-                h4 Shop By Color
-                .filter-color
-                  a(href="#")
-                    span(style="background-color:#a89166;")
-                  a(href="#")
-                    span(style="background-color:#0f0212;")
-                  a(href="#")
-                    span(style="background-color:#00ff00;")
-              .sec-filter
-                h4 Shop By Type
-                .filter-type
+                  .collapse.show#price-content(aria-labelledby="#price-content" data-parent="#ec-filter")
+                    ul
+                      li.custom-control.custom-radio
+                        input.custom-control-input(type="radio" id="price1" name="customRadio")
+                        label.custom-control-label(for="price1") $100 - $200
+                      li.custom-control.custom-radio
+                        input.custom-control-input(type="radio" id="price2" name="customRadio")
+                        label.custom-control-label(for="price2") $200 - $300
+                      li.custom-control.custom-radio
+                        input.custom-control-input(type="radio" id="price3" name="customRadio")
+                        label.custom-control-label(for="price3") $300 - $500
+                      li.custom-control.custom-radio
+                        input.custom-control-input(type="radio" id="price4" name="customRadio")
+                        label.custom-control-label(for="price4") $700 - $1000
+              .filter.sec-filter#color-heading
+                h4.coll-h(data-toggle="collapse" data-target="#color-content" aria-expanded="true" aria-controls="color") Shop By Color
+                .collapse.show#color-content(aria-labelledby="#color-content" data-parent="#ec-filter")
+                  .filter-color
+                    a(href="#")
+                      span(style="background-color:#a89166;")
+                    a(href="#")
+                      span(style="background-color:#0f0212;")
+                    a(href="#")
+                      span(style="background-color:#00ff00;")
+              .sec-filter#type-heading
+                h4.coll-h(data-toggle="collapse" data-target="#type-content" aria-expanded="true" aria-controls="color") Shop By Type
+                .filter-type.collapse.show#type-content(aria-labelledby="#type-content" data-parent="#ec-filter")
                   ul
                     li.custom-control.custom-radio
                       input.custom-control-input(type="radio" id="type1" name="customRadio")
@@ -99,10 +129,9 @@ block content
                 label VIEW
                 .view-mode
                   a.list-mode(href="#")
-                  a.grid-mode.grid2(href="#")
-                  a.grid-mode.grid3(href="#")
-                  a.grid-mode.grid4(href="#")
-                  a.grid-mode.grid5(href="#")
+                    img.svg(src="images/grip-horizontal-solid.svg")
+                  a.grid-mode.active(href="#")
+                    img.svg(src="images/grip-vertical-solid.svg")
               .col.show-sort
                 label SHOW
                 select.select.show
@@ -136,7 +165,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -170,7 +199,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -204,7 +233,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -238,7 +267,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -272,7 +301,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -306,7 +335,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -340,7 +369,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -374,7 +403,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -408,7 +437,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -442,7 +471,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -476,7 +505,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -510,7 +539,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -544,7 +573,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -578,7 +607,7 @@ block content
                             i.icon
                               img.svg(src="images/heart-regular.svg")
                         .img.overlay(style="background-image: url(images/FPK-2018091546.jpg);")
-                        a.btn.btn-primary(href="#") Quick View
+                        a.btn.btn-primary(href="#" data-toggle='modal' data-target='#modalQv') Quick View
                     .desc
                       .star
                         i
@@ -594,3 +623,57 @@ block content
                       .name
                         h3 Lorem Ipsuem
                       .price $389.00
+
+
+block modalLocal
+  #modalQv.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalSearch' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        a.close(href="#" data-dismiss="modal")
+          img.svg(src="images/times-solid.svg")
+        .row
+          .col-md-6
+            .box-img
+              .img(style="background-image: url(images/img-product-01.jpg);")
+          .col-md-6
+            .details
+              h2 Product 1
+              .desc
+                p Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper 
+              
+              dl
+                dt
+                  label Price:
+                dd
+                  .price
+                    span.now $300.00
+                    small.real $350.00
+                dt
+                  label Availability:
+                dd
+                  span In Stock
+                dt
+                  label Size:
+                dd
+                  .sizes
+                    a.active(href="#") L
+                    a(href="#") S
+                dt
+                  label Quantity:
+                dd
+                  .form-group.qty
+                    a.btn-number.min(href="#" data-type="minus" data-field="quant[1]")
+                      i
+                        img.svg(src="images/minus-solid.svg")
+                    input.type-hidden(type="hidden" name="size" value="300")
+                    input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="0" max="20")
+                    a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]")
+                      i
+                        img.svg(src="images/plus-solid.svg")
+                dt
+                  label Subtotal:
+                dd
+                  .price $600.00
+              .pd-action
+                button.btn
+                  span Add to chart

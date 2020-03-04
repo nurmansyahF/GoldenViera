@@ -96,7 +96,7 @@
                         </ul>
                       </div>
                     </li>
-                    <li><a href="#" style="background-image: url(images/search-solid.svg)"></a></li>
+                    <li><a href="#" style="background-image: url(images/search-solid.svg)" data-toggle="modal" data-target="#modalSearch"></a></li>
                   </ul>
                   <div class="burger-icon"><span></span><span></span><span></span></div>
                 </div>
@@ -123,36 +123,75 @@
               <div class="row">
                 <div class="col-lg-3">
                   <div class="side-filter">
-                    <div class="sec-filter">
-                      <h4>Shop By Price</h4>
+                    <h4>Category</h4>
+                    <div class="filter-ec">
+                      <ul class="ec-wrapper" id="ec-filter">
+                        <li class="card">
+                          <div class="card-header" id="ec1-heading"><a class="collapsed" href="#" data-toggle="collapse" data-target="#ec1-content" aria-expanded="true" aria-controls="ec1">Eye Makeup</a></div>
+                          <div class="collapse how" id="ec1-content" aria-labelledby="#ec1-content" data-parent="#ec-filter">
+                            <ul>
+                              <li><a href="#">Makeup 1</a></li>
+                              <li><a href="#">Makeup 2</a></li>
+                              <li><a href="#">Makeup 3</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="card">
+                          <div class="card-header" id="ec2-heading"><a class="collapsed" href="#" data-toggle="collapse" data-target="#ec2-content" aria-expanded="true" aria-controls="ec2">Soap</a></div>
+                          <div class="collapse how" id="ec2-content" aria-labelledby="#ec2-content" data-parent="#ec-filter">
+                            <ul>
+                              <li><a href="#">Soap 1</a></li>
+                              <li><a href="#">Soap 2</a></li>
+                              <li><a href="#">Soap 3</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="card">
+                          <div class="card-header" id="ec3-heading"><a class="collapsed" href="#" data-toggle="collapse" data-target="#ec3-content" aria-expanded="true" aria-controls="ec2">Liquid Soap</a></div>
+                          <div class="collapse how" id="ec3-content" aria-labelledby="#ec3-content" data-parent="#ec-filter">
+                            <ul>
+                              <li><a href="#">Liquid Soap 1</a></li>
+                              <li><a href="#">Liquid Soap 2</a></li>
+                              <li><a href="#">Liquid Soap 3</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="sec-filter" id="price-heading">
+                      <h4 class="coll-h" data-toggle="collapse" data-target="#price-content" aria-expanded="true" aria-controls="price">Shop By Price</h4>
                       <div class="filter-price">
-                        <ul>
-                          <li class="custom-control custom-radio">
-                            <input class="custom-control-input" type="radio" id="price1" name="customRadio"/>
-                            <label class="custom-control-label" for="price1">$100 - $200</label>
-                          </li>
-                          <li class="custom-control custom-radio">
-                            <input class="custom-control-input" type="radio" id="price2" name="customRadio"/>
-                            <label class="custom-control-label" for="price2">$200 - $300</label>
-                          </li>
-                          <li class="custom-control custom-radio">
-                            <input class="custom-control-input" type="radio" id="price3" name="customRadio"/>
-                            <label class="custom-control-label" for="price3">$300 - $500</label>
-                          </li>
-                          <li class="custom-control custom-radio">
-                            <input class="custom-control-input" type="radio" id="price4" name="customRadio"/>
-                            <label class="custom-control-label" for="price4">$700 - $1000</label>
-                          </li>
-                        </ul>
+                        <div class="collapse show" id="price-content" aria-labelledby="#price-content" data-parent="#ec-filter">
+                          <ul>
+                            <li class="custom-control custom-radio">
+                              <input class="custom-control-input" type="radio" id="price1" name="customRadio"/>
+                              <label class="custom-control-label" for="price1">$100 - $200</label>
+                            </li>
+                            <li class="custom-control custom-radio">
+                              <input class="custom-control-input" type="radio" id="price2" name="customRadio"/>
+                              <label class="custom-control-label" for="price2">$200 - $300</label>
+                            </li>
+                            <li class="custom-control custom-radio">
+                              <input class="custom-control-input" type="radio" id="price3" name="customRadio"/>
+                              <label class="custom-control-label" for="price3">$300 - $500</label>
+                            </li>
+                            <li class="custom-control custom-radio">
+                              <input class="custom-control-input" type="radio" id="price4" name="customRadio"/>
+                              <label class="custom-control-label" for="price4">$700 - $1000</label>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                    <div class="filter sec-filter">
-                      <h4>Shop By Color</h4>
-                      <div class="filter-color"><a href="#"><span style="background-color:#a89166;"></span></a><a href="#"><span style="background-color:#0f0212;"></span></a><a href="#"><span style="background-color:#00ff00;"></span></a></div>
+                    <div class="filter sec-filter" id="color-heading">
+                      <h4 class="coll-h" data-toggle="collapse" data-target="#color-content" aria-expanded="true" aria-controls="color">Shop By Color</h4>
+                      <div class="collapse show" id="color-content" aria-labelledby="#color-content" data-parent="#ec-filter">
+                        <div class="filter-color"><a href="#"><span style="background-color:#a89166;"></span></a><a href="#"><span style="background-color:#0f0212;"></span></a><a href="#"><span style="background-color:#00ff00;"></span></a></div>
+                      </div>
                     </div>
-                    <div class="sec-filter">
-                      <h4>Shop By Type</h4>
-                      <div class="filter-type">
+                    <div class="sec-filter" id="type-heading">
+                      <h4 class="coll-h" data-toggle="collapse" data-target="#type-content" aria-expanded="true" aria-controls="color">Shop By Type</h4>
+                      <div class="filter-type collapse show" id="type-content" aria-labelledby="#type-content" data-parent="#ec-filter">
                         <ul>
                           <li class="custom-control custom-radio">
                             <input class="custom-control-input" type="radio" id="type1" name="customRadio"/>
@@ -195,7 +234,7 @@
                   <div class="filter-prdct">
                     <div class="col view">
                       <label>VIEW</label>
-                      <div class="view-mode"><a class="list-mode" href="#"></a><a class="grid-mode grid2" href="#"></a><a class="grid-mode grid3" href="#"></a><a class="grid-mode grid4" href="#"></a><a class="grid-mode grid5" href="#"></a></div>
+                      <div class="view-mode"><a class="list-mode" href="#"><img class="svg" src="images/grip-horizontal-solid.svg"/></a><a class="grid-mode active" href="#"><img class="svg" src="images/grip-vertical-solid.svg"/></a></div>
                     </div>
                     <div class="col show-sort">
                       <label>SHOW</label>
@@ -222,7 +261,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -239,7 +278,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -256,7 +295,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -273,7 +312,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -290,7 +329,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -307,7 +346,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -324,7 +363,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -341,7 +380,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -358,7 +397,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -375,7 +414,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -392,7 +431,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -409,7 +448,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -426,7 +465,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -443,7 +482,7 @@
                             <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
                             <div class="box-action">
                               <div class="action"><a class="cart" href="#"><i class="icon"><img class="svg" src="images/shopping-cart-solid.svg"/></i></a><a class="link" href="products-single.html"><i class="icon"><img class="svg" src="images/link-solid.svg"/></i></a><a class="like" href="#"><i class="icon"><img class="svg" src="images/heart-regular.svg"/></i></a></div>
-                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#">Quick View</a>
+                              <div class="img overlay" style="background-image: url(images/FPK-2018091546.jpg);"></div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalQv">Quick View</a>
                             </div>
                           </div>
                           <div class="desc">
@@ -507,6 +546,73 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="modalSearch" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content"><a class="close" href="#" data-dismiss="modal"><img class="svg" src="images/times-solid.svg"/></a>
+          <form class="search-form">
+            <input class="form-control" type="text" placeholder="Search"/>
+            <button typ="submit"><i><img class="svg" src="images/search-solid.svg"/></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalQv" tabindex="-1" role="dialog" aria-labelledby="modalSearch" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content"><a class="close" href="#" data-dismiss="modal"><img class="svg" src="images/times-solid.svg"/></a>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="box-img">
+                <div class="img" style="background-image: url(images/img-product-01.jpg);"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="details">
+                <h2>Product 1</h2>
+                <div class="desc">
+                  <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper </p>
+                </div>
+                <dl>
+                  <dt>
+                    <label>Price:</label>
+                  </dt>
+                  <dd>
+                    <div class="price"><span class="now">$300.00</span><small class="real">$350.00</small></div>
+                  </dd>
+                  <dt>
+                    <label>Availability:</label>
+                  </dt>
+                  <dd><span>In Stock</span></dd>
+                  <dt>
+                    <label>Size:</label>
+                  </dt>
+                  <dd>
+                    <div class="sizes"><a class="active" href="#">L</a><a href="#">S</a></div>
+                  </dd>
+                  <dt>
+                    <label>Quantity:</label>
+                  </dt>
+                  <dd>
+                    <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[1]"><i><img class="svg" src="images/minus-solid.svg"/></i></a>
+                      <input class="type-hidden" type="hidden" name="size" value="300"/>
+                      <input class="form-control input-number" type="number" placeholder="" name="quant[1]" value="1" min="0" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[1]"><i><img class="svg" src="images/plus-solid.svg"/></i></a>
+                    </div>
+                  </dd>
+                  <dt>
+                    <label>Subtotal:</label>
+                  </dt>
+                  <dd>
+                    <div class="price">$600.00</div>
+                  </dd>
+                </dl>
+                <div class="pd-action">
+                  <button class="btn"><span>Add to chart</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="plugins/jquery-3.4.1.min.js"></script>
     <script src="plugins/bootstrap/bootstrap.bundle.min.js"></script>

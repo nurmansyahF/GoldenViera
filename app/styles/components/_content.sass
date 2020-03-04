@@ -745,8 +745,31 @@
       font-size: 1.25em;
       border-bottom: 1px solid #dddddd
       margin-bottom: 15px
+      &.coll-h
+        padding-left: 20px
+        position: relative
+        color: $text
+        &:before
+          content: ""
+          width: 12px
+          height: 12px
+          background-image: url(../images/chevron-down-solid.svg)
+          +bgcover
+          display: inline-block
+          position: absolute
+          top: 6px
+          left: 0
+          transition: all .3s ease
+        &.collapsed
+          transition: all .5s linear
+          &:before
+            transform: rotate(180deg)
+    div.collapse.show
+      padding-bottom: 40px
     .sec-filter
-      margin-bottom: 50px
+      // margin-bottom: 50px
+      ul
+        margin-bottom: 0
       &-price,
       &-type
         li
@@ -755,6 +778,40 @@
             margin-bottom: 0
         label
           padding: 0 8px
+    .ec-wrapper
+      a
+        color: $text
+        text-decoration: none
+      .card
+        line-height: 30px
+      .card-header
+        font-weight: 600
+        display: block
+        padding-right: 20px
+        position: relative
+        a
+          display: block
+          &:before,
+          &:after
+            content: ""
+            width: 12px
+            height: 2px
+            background: $text
+            position: absolute
+            top: 12px
+            right: 4px
+          &:after
+            transform: rotate(0deg)
+          &.collapsed
+            &:after
+              transform: rotate(90deg)
+      .collapse
+        padding: 10px 0
+      ul
+        list-style: disc
+        padding-left: 30px
+        li
+          line-height: 30px
   .filter-color
     a
       display: inline-block
@@ -791,6 +848,8 @@
   .view-mode
     border: 1px solid #e4e4e4;
     padding: 5px 12px;
+    min-width: 100px
+    text-align: center
     max-width: 190px
     display: inline-block
     vertical-align: middle
@@ -803,9 +862,15 @@
       margin-left: 0;
       position: relative;
       cursor: pointer;
-      background-color: #000
+      // background-color: #000
+      color: $text
+      .svg
+        width: 20px
+        height: 20px
       &:last-child
         margin-right: 0
+      &.active
+        color: $primary
   .show-sort
     max-width: 380px
     margin-left: -20px
@@ -1243,9 +1308,6 @@
         display: inline-block
         margin-right: 5px
       .total-item
-        height: 40px
-        width: 140px
-        background: #ccc
   &-item
     display: flex
     padding-bottom: 20px

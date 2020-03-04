@@ -48,6 +48,7 @@ main
 .item-prdct
   position: relative
   width: 100%
+  margin-bottom: 30px
   a
     position: relative
     text-decoration: none
@@ -200,3 +201,200 @@ main
     &-5
       i
         color: $primary
+
+
+//Modal search
+#modalSearch
+  .close
+    position: fixed;
+    top: 0;
+    right: -45%;
+    color: $text
+    .svg
+      width: 30px
+      height: 30px
+  .modal-lg
+    max-width: 50%
+  .modal-dialog
+    transform: translate(100%, -50%);
+  .modal-content
+    border: none
+  .search-form
+    border-bottom: 1px solid #000
+    .form-control
+      font-size: 70px;
+      height: auto;
+      line-height: normal;
+      border: none
+      outline: none !important
+      max-width: calc(100% - 90px)
+      &::-webkit-input-placeholder
+        color: $text
+    button
+      width: 80px
+      height: 80px
+      background: transparent
+      border: none
+      outline: none !important
+      .svg
+        width: 70px
+        height: 70px
+  &.show
+    .modal-dialog
+      transform: translate(0, 0);
+
+body.backdrop-white
+  .modal-backdrop
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: -60px;
+    right: -60px;
+    left: inherit
+    bottom: inherit
+    background-color: #FFF
+    &:before
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      /* background-color: rgba(255,255,255,0.98); */
+      zoom: 1;
+      background-color: transparent\9;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      -webkit-transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-delay: 2s
+      // z-index: 9999;
+      ransform: scale(1)
+    &.fade.show
+      opacity: 1
+      top: 0
+      right: 0
+      &:before
+        transform: scale(75)
+
+
+//Modal Quick View
+#modalQv
+  .close
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: $text
+    z-index: 10
+    .svg
+      width: 20px
+      height: 20px
+  .modal-lg
+    max-width: 55%
+  .modal-content
+    padding: 20px
+    background: #FFF
+  .box-img
+    .img
+      width: 100%;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      &:before
+        content: "";
+        padding: 58.8% 0;
+        display: block;
+  .details
+    margin: 0 0 0 15px
+    h2
+      font-weight: bold
+      margin-bottom: 10px
+    .price
+      margin-bottom: 10px
+      .now
+        font-size: 22px;
+        font-weight: bold;
+        color: $secondary
+      .real
+        display: inline-block;
+        margin-left: 5px;
+        color: #aaaaaa;
+        font-weight: normal;
+        text-decoration: line-through
+        font-size: 16px
+    .avail
+      display: flex
+      label
+        font-weight: 700
+        width: 30%
+        max-width:  150px
+        margin-right: 20px
+    .desc
+      padding: 20px 0 30px
+    dl
+      +clearfix
+      dt
+        float: left
+        width: 30%
+      dd
+        padding-left: 150px
+        margin-bottom: 15px
+    .price
+      font-size: 22px;
+      font-weight: bold;
+      color: $secondary
+    .sizes
+      a
+        display: inline-block
+        padding: 3px 10px
+        border: 2px solid $border
+        color: $text
+        margin-right: 10px
+        text-decoration: none
+        &:hover,
+        &.active
+          border-color: $primary
+    .pd-action
+      .btn
+        font-weight: 700
+        text-transform: capitalize
+        font-family: Open Sans
+        width: 100%
+        margin-bottom: 15px
+        display: inline-block
+        &:nth-child(2)
+          margin-right: 0 !important
+        &:not(.btn-block)
+          margin-right: 15px
+          width: calc(50% - 10px)
+  +responsive(1500px)
+    .modal-lg
+      max-width: 80%       
+.qty
+  display: flex
+  max-width: 130px
+  align-items: center
+  .btn-number
+    width: 40px
+    height: 40px
+    display: flex
+    border: 1px solid $border
+    text-align: center
+    align-items: center
+    justify-content: center
+    color: $text
+    .svg
+      width: 15px
+      height: 15px
+  .input-number
+    max-width: calc(100% - 80px)
+    border-left: 0 !important
+    border-right: 0 !important
+    text-align: center !important
+    background: #f5f5f5
