@@ -1,0 +1,28 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "account";
+
+block content
+  .about
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 Account
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Account
+    .dashboard-wrapper
+      .container
+        .row
+          .col-md-6
+            .account-dashboard.animate.fade-inb
+              .order-history
+                h3 Order History
+                p You haven't placed any orders yet.
+              .account-details
+                h3 Account Details
+                h4 User Name
+                a.btn-link(href="account-dashboard-address.html") View Address (0)

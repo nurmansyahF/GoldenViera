@@ -1276,8 +1276,98 @@
       height: auto
       padding: 15px 20px;
 
-// Cart
 
+//Login
+.login
+  &-wrapper
+    padding: 80px 0
+    .account-form
+      padding-top: 40px
+      h3
+        font-weight: bold
+        font-size: 40px
+        line-height: 1.5em
+        text-align: center
+        margin-bottom: 0
+        &last-child
+          margin-bottom: 24px
+
+      p
+        text-align: center
+      .form-control
+        height: auto
+        padding: 15px 20px;
+      .form-action
+        display: flex
+        flex-direction: column
+        .btn
+          margin-bottom: 16px
+          &:last-child
+            margin-bottom: 0
+        .btn-link
+          color: $text
+          padding: 0
+          text-transform: capitalize
+          &:hover
+            color: $secondary
+      .errors
+        background-color: #fff6f6
+        display: inline-block;
+        width: 100%;
+        border-radius: 2px;
+        padding: 15px 15px;
+        margin-bottom: 15px;
+        border: 1px solid #d02e2e;
+        color: #d02e2e
+        font-size: 16px;
+        text-align: left;
+        ul
+          list-style: disc outside;
+          margin-left: 20px;
+          margin-bottom: 0
+          li
+
+// Dashboard
+.dashboard
+  &-wrapper
+    padding: 45px 0
+    h2,
+    h3,
+    h4,
+      font-weight: 700
+      margin-bottom: 8px
+    .btn-link
+      text-transform: capitalize
+    .order-history
+      margin-bottom: 16px
+    .btn-link
+      color: $text
+      &:hover
+        color: $secondary
+    .add-address
+      .card
+        .btn-primary
+          margin-bottom: 15px
+      .form-action
+        text-align: left
+        .btn-primary
+          width: auto
+      .collapse.show
+        margin-bottom: 24px
+    .address-details
+      h3
+        font-size: 21px
+      p
+        margin-bottom: 8px
+      .action
+        .btn-link
+          padding: 0 10px
+          &:first-child
+            border-right: 1px solid $secondary
+            margin-right: 10px
+
+
+// Cart
 .cart
   &-empty
     padding: 90px 0

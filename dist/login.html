@@ -74,7 +74,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="current-menu"><a href="about.html">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </nav>
@@ -91,8 +91,8 @@
                     <li class="has-child"><a href="#" style="background-image: url(images/user-solid.svg)"></a>
                       <div class="sub-menu">
                         <ul class="dd-user">
-                          <li class="login"><a href="#">Login</a></li>
-                          <li class="create"><a href="#">Create Account</a></li>
+                          <li class="login"><a href="login.html">Login</a></li>
+                          <li class="create"><a href="register.html">Create Account</a></li>
                         </ul>
                       </div>
                     </li>
@@ -118,7 +118,32 @@
               </div>
             </div>
           </div>
-          <div class="login-wrapper"></div>
+          <div class="login-wrapper">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <div class="account-form animate fade-inb">
+                    <div class="errors">
+                      <ul>
+                        <li>Incorrect email or password.</li>
+                      </ul>
+                    </div>
+                    <form action="">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Email"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="assword" placeholder="Password"/>
+                      </div>
+                      <div class="form-action"><a class="btn btn-link" href="reset-password.html">Forgot your password? </a>
+                        <button class="btn btn-primary" type="submit">Send</button><a class="btn btn-link" href="register.html">Create account</a><a class="btn btn-link" href="home.html">Return to store</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="footer">

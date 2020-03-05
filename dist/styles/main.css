@@ -1447,6 +1447,60 @@ input[type=number] { -moz-appearance: textfield; }
 
 .contact .contact-form .form-control { height: auto; padding: 15px 20px; }
 
+.login-wrapper { padding: 80px 0; }
+
+.login-wrapper .account-form { padding-top: 40px; }
+
+.login-wrapper .account-form h3 { font-weight: bold; font-size: 40px; line-height: 1.5em; text-align: center; margin-bottom: 0; }
+
+.login-wrapper .account-form h3last-child { margin-bottom: 24px; }
+
+.login-wrapper .account-form p { text-align: center; }
+
+.login-wrapper .account-form .form-control { height: auto; padding: 15px 20px; }
+
+.login-wrapper .account-form .form-action { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+
+.login-wrapper .account-form .form-action .btn { margin-bottom: 16px; }
+
+.login-wrapper .account-form .form-action .btn:last-child { margin-bottom: 0; }
+
+.login-wrapper .account-form .form-action .btn-link { color: #151413; padding: 0; text-transform: capitalize; }
+
+.login-wrapper .account-form .form-action .btn-link:hover { color: #3a783a; }
+
+.login-wrapper .account-form .errors { background-color: #fff6f6; display: inline-block; width: 100%; border-radius: 2px; padding: 15px 15px; margin-bottom: 15px; border: 1px solid #d02e2e; color: #d02e2e; font-size: 16px; text-align: left; }
+
+.login-wrapper .account-form .errors ul { list-style: disc outside; margin-left: 20px; margin-bottom: 0; }
+
+.dashboard-wrapper { padding: 45px 0; }
+
+.dashboard-wrapper h2, .dashboard-wrapper h3, .dashboard-wrapper h4 { font-weight: 700; margin-bottom: 8px; }
+
+.dashboard-wrapper .btn-link { text-transform: capitalize; }
+
+.dashboard-wrapper .order-history { margin-bottom: 16px; }
+
+.dashboard-wrapper .btn-link { color: #151413; }
+
+.dashboard-wrapper .btn-link:hover { color: #3a783a; }
+
+.dashboard-wrapper .add-address .card .btn-primary { margin-bottom: 15px; }
+
+.dashboard-wrapper .add-address .form-action { text-align: left; }
+
+.dashboard-wrapper .add-address .form-action .btn-primary { width: auto; }
+
+.dashboard-wrapper .add-address .collapse.show { margin-bottom: 24px; }
+
+.dashboard-wrapper .address-details h3 { font-size: 21px; }
+
+.dashboard-wrapper .address-details p { margin-bottom: 8px; }
+
+.dashboard-wrapper .address-details .action .btn-link { padding: 0 10px; }
+
+.dashboard-wrapper .address-details .action .btn-link:first-child { border-right: 1px solid #3a783a; margin-right: 10px; }
+
 .cart-empty { padding: 90px 0; width: 100%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-content: center; -ms-flex-line-pack: center; align-content: center; text-align: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 .cart-empty .box-img { margin-bottom: 30px; }

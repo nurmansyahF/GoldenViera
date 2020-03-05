@@ -1,0 +1,75 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "account";
+
+block content
+  .about
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 ADDRESSES
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span Address
+    .dashboard-wrapper
+      .container
+        .row
+          .col-md-6
+            .account-dashboard.animate.fade-inb
+              .add-address
+                .card#openForm
+                  a.btn.btn-primary(href="#" data-toggle="collapse" data-target="#form-content" aria-expanded="true" aria-controls="ec1") Add a New Address
+                p
+                  a.btn-link(href="account-dashboard.html") Return to account Details
+                .collapse#form-content(aria-labelledby="#form-content" data-parent="#openForm")
+                  h2 Add a New Address
+                  form(action="")
+                    .form-group
+                      label First Name
+                      input.form-control(type="text")
+                    .form-group
+                      label Last Name
+                      input.form-control(type="text")
+                    .form-group
+                      label Company
+                      input.form-control(type="text")
+                    .form-group
+                      label Address1
+                      input.form-control(type="text")
+                    .form-group
+                      label Address2
+                      input.form-control(type="text")
+                    .form-group
+                      label Country
+                      select#country.form-control
+                        option(value="Indonesia" select) Indonesia
+                        option(value="Malaysia") Malaysia
+                        option(value="Singapore") Singapore
+                    .form-group
+                      label Province
+                      select#province.form-control
+                        option(value="Aceh") Aceh
+                        option(value="Bali") Bali
+                        option(value="Bengkulu") Bengkulu
+                    .form-group
+                      label Postal/Zip Code
+                      input.form-control(type="text")
+                    .form-group
+                      label Phone
+                      input.form-control(type="text")
+                    .form-action
+                      input.btn.btn-primary(type="submit" value="Add Address")
+                      p
+                        a.btn.btn-link(href="#" data-toggle="collapse" data-target="#form-content" aria-expanded="true" aria-controls="ec1") Cancel
+              .address-details
+                h2 Your Address
+                .address-item
+                  h3 UserName Address (Default)
+                  p Villarreal Briggs Co 826 New Lane, In et perferendis id <br>Voluptatem reprehend
+                    <br>13297<br>Netherlands<br>+1 (583) 819-7888
+                  .action
+                    a.btn.btn-link(href="#") Edit
+                    a.btn.btn-link(href="#") Delete

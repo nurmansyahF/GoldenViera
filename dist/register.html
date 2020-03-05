@@ -106,87 +106,38 @@
         </div>
       </header>
       <main>
-        <div class="cart">
+        <div class="about">
           <div class="banner-small" style="background-image: url(images/FPK-2018091546.jpg)">
             <div class="container-big">
               <div class="title-breadcrumbs">
-                <h1>YOUR SHOPPING CART</h1>
+                <h1>Create Account</h1>
                 <ul class="breadcrumbs">
                   <li><a href="home.html">Home</a></li>
-                  <li><span>Your Shopping Cart</span></li>
+                  <li><span>Create Account</span></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="cart-wrapper">
-            <div class="container cart-content">
-              <div class="row">
-                <div class="col-md-8">
-                  <h3 class="cart-title">PRODUCTS</h3>
-                  <div class="cart-item-wrapper">
-                    <div class="cart-item"><a class="remove" href="#"><i><img class="svg" src="images/times-solid.svg"/></i></a>
-                      <div class="img-box" style="background-image: url(images/img-product-01.jpg)"></div>
-                      <div class="text-box">
-                        <h4>Product 1</h4><span class="detdesc">S/Black</span><span class="price">$ 10.0</span>
-                        <div class="total-item">
-                          <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[1]"><i><img class="svg" src="images/minus-solid.svg"/></i></a>
-                            <input class="type-hidden" type="hidden" name="size" value="300"/>
-                            <input class="form-control input-number" type="number" placeholder="" name="quant[1]" value="1" min="0" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[1]"><i><img class="svg" src="images/plus-solid.svg"/></i></a>
-                          </div>
-                        </div><span class="total-price"><b>Total:</b>$ 10.0</span>
-                      </div>
-                    </div>
-                    <div class="cart-item"><a class="remove" href="#"><i><img class="svg" src="images/times-solid.svg"/></i></a>
-                      <div class="img-box" style="background-image: url(images/img-product-01.jpg)"></div>
-                      <div class="text-box">
-                        <h4>Product 1</h4><span class="detdesc">S/Black</span><span class="price">$ 10.0</span>
-                        <div class="total-item">
-                          <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[2]"><i><img class="svg" src="images/minus-solid.svg"/></i></a>
-                            <input class="type-hidden" type="hidden" name="size" value="300"/>
-                            <input class="form-control input-number" type="number" placeholder="" name="quant[2]" value="1" min="0" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[2]"><i><img class="svg" src="images/plus-solid.svg"/></i></a>
-                          </div>
-                        </div><span class="total-price"><b>Total:</b>$ 10.0</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cart-item-action"><a class="btn btn-primary" href="products.html">Continue shopping</a><a class="btn btn-primary" href="#">Update Cart</a></div>
-                </div>
+          <div class="login-wrapper">
+            <div class="container">
+              <div class="row justify-content-center">
                 <div class="col-md-4">
-                  <div class="cart-order-summary">
-                    <h3 class="cart-title">ORDER SUMMARY</h3>
-                    <div class="subtotal">
-                      <label>Subtotal</label><span>$ 100.00</span>
-                    </div><a class="note">Add a note to your order</a>
-                    <div class="form-group hidden">
-                      <textarea class="form-control" row="4"></textarea>
-                    </div>
-                    <p>Shipping, taxes, and discounts will be calculated at checkout.</p><a class="btn btn-primary btn-block" href="checkout.html">Proceed to Checkout</a>
-                  </div>
-                  <div class="cart-get-shipping">
-                    <h3 class="cart-title">GET SHIPPING ESTIMATES</h3>
+                  <div class="account-form animate fade-inb">
                     <form action="">
                       <div class="form-group">
-                        <label>Country</label>
-                        <select class="form-control" id="country">
-                          <option value="Indonesia" select="select">Indonesia</option>
-                          <option value="Malaysia">Malaysia</option>
-                          <option value="Singapore">Singapore</option>
-                        </select>
+                        <input class="form-control" type="text" placeholder="First Name"/>
                       </div>
                       <div class="form-group">
-                        <label>Province</label>
-                        <select class="form-control" id="province">
-                          <option value="Aceh">Aceh</option>
-                          <option value="Bali">Bali</option>
-                          <option value="Bengkulu">Bengkulu</option>
-                        </select>
+                        <input class="form-control" type="text" placeholder="Last Name"/>
                       </div>
                       <div class="form-group">
-                        <label>Postal/ Zip Code</label>
-                        <input class="form-control" type="text"/>
+                        <input class="form-control" type="text" placeholder="Email"/>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="assword" placeholder="Password"/>
                       </div>
                       <div class="form-action">
-                        <input class="btn btn-primary btn-block" href="#" type="submit" value="Calculate Shipping"/>
+                        <button class="btn btn-primary" type="submit">Create</button><a class="btn btn-link" href="home.html">Return to store</a>
                       </div>
                     </form>
                   </div>
