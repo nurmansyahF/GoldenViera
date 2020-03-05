@@ -874,17 +874,21 @@
       &.active
         color: $primary
   .show-sort
-    max-width: 380px
+    max-width: 406px
     margin-left: -20px
-  .select
+    // #showOpt
+    //   display: inline-block
+    //   width: 60px
+  .select,
+  .form-group
     display: inline-block
     margin-right: 15px
     &:last-child
       margin-right: 0
     &.show
-      width: 60px
+      width: 80px
     &.sort
-      width: 150px
+      width: 160px
   .product-list
     padding-top: 30px
     padding-bottom: 30px
@@ -1461,6 +1465,10 @@
     height: auto
     max-height: 45px
     margin-bottom: 15px
+  select.form-control
+    padding-top: 0
+    padding-bottom: 0
+    height: 45px
   .form-group
     &.filed
       .form-control
@@ -1500,6 +1508,7 @@
     text-transform: capitalize
     &:hover
       color: $secondary
+
 
   &-product-summary
   &-ps-item

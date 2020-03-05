@@ -6,7 +6,7 @@ block vars
 block header
 
 block content
-  .checkout
+  .checkout.animate.fade-scale
     .container
       .row
         .col-md-7
@@ -60,8 +60,8 @@ block content
                     .row
                       .col-sm-6
                         span.floating-label Country/Region
-                        select.select
-                          option(value="Indonesia") Indonesia
+                        select#country.form-control
+                          option(value="Indonesia" select) Indonesia
                           option(value="Malaysia") Malaysia
                           option(value="Singapore") Singapore
                       .col-sm-6

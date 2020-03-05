@@ -231,27 +231,29 @@
                   </div>
                 </div>
                 <div class="col-lg-9">
-                  <div class="filter-prdct">
+                  <div class="filter-prdct row">
                     <div class="col view">
                       <label>VIEW</label>
                       <div class="view-mode"><a class="list-mode" href="#"><img class="svg" src="images/grip-horizontal-solid.svg"/></a><a class="grid-mode active" href="#"><img class="svg" src="images/grip-vertical-solid.svg"/></a></div>
                     </div>
                     <div class="col show-sort">
                       <label>SHOW</label>
-                      <select class="select show">
-                        <option value="8">8</option>
-                        <option value="12">12</option>
-                        <option value="16">16</option>
-                        <option value="20">20</option>
-                        <option value="24">24</option>
-                        <option value="30">30</option>
-                      </select>
+                      <div class="form-group show">
+                        <select class="form-control" id="showOpt">
+                          <option select="select">15</option>
+                          <option>30</option>
+                          <option>60</option>
+                          <option>80</option>
+                        </select>
+                      </div>
                       <label>SORT</label>
-                      <select class="select sort">
-                        <option value="Faeutred">Feautred</option>
-                        <option value="Price, low to high">Price, low to high</option>
-                        <option value="Price, high to low">Price, high to low</option>
-                      </select>
+                      <div class="form-group sort">
+                        <select class="form-control" id="showSort">
+                          <option select="select">Feautred</option>
+                          <option>Price, low to high</option>
+                          <option>Price, high to low</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div class="product-list row">

@@ -124,7 +124,7 @@ block content
 
 
           .col-lg-9
-            .filter-prdct
+            .filter-prdct.row
               .col.view
                 label VIEW
                 .view-mode
@@ -134,18 +134,18 @@ block content
                     img.svg(src="images/grip-vertical-solid.svg")
               .col.show-sort
                 label SHOW
-                select.select.show
-                  option(value="8") 8
-                  option(value="12") 12
-                  option(value="16") 16
-                  option(value="20") 20
-                  option(value="24") 24
-                  option(value="30") 30
+                .form-group.show
+                  select#showOpt.form-control
+                    option(select) 15
+                    option 30
+                    option 60
+                    option 80
                 label SORT
-                select.select.sort
-                  option(value="Faeutred") Feautred
-                  option(value="Price, low to high") Price, low to high
-                  option(value="Price, high to low") Price, high to low
+                .form-group.sort
+                  select#showSort.form-control
+                    option(select) Feautred
+                    option Price, low to high
+                    option Price, high to low
             .product-list.row
               .col-lg-4
                 .item-prdct.has-sale
