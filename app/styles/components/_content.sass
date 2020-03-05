@@ -1583,3 +1583,83 @@
           top: 40px
     .form-control.filled
       padding-bottom: 3px
+    .form-action
+      margin-top: 16px
+      .btn-primary
+        min-width: 200px
+
+
+  .checkout-shipping
+    .box-cs
+      border: 1px solid $border
+      border-radius: 4px
+      padding: 10px 15px
+      margin-bottom: 24px
+    .bcs-item
+      display: flex
+      justify-content: space-between
+      align-items: baseline
+      font-size: 14px
+      line-height: 1.5em
+      padding-bottom: 10px
+      margin-bottom: 10px
+      border-bottom: 1px solid $border
+
+      &:last-child
+        margin-bottom: 0
+        border-bottom: 0
+      span
+        color: #737373
+      p
+        margin-bottom: 0
+        width: calc(100% - 180px)
+      a
+        font-size: 12px
+        line-height: 1.5em
+        color: $secondary
+        text-decoration: none
+
+      &.not-changed
+        p
+         width: calc(100% - 90px) 
+    h4
+      margin-bottom: 12px
+
+    .box-shippm
+      border: 1px solid $border
+      border-radius: 4px
+      padding: 10px 15px
+      margin-bottom: 32px
+      &:last-child
+        margin-bottom: 0
+      label
+        font-size: 14px
+        line-height: 1.5em
+        position: relative
+        display: block
+        padding-left: 24px
+        width: 100%
+        span
+          position: absolute
+          right: 0
+          top: 0
+          font-weight: bold
+      .custom-control
+        margin-bottom: 12px
+        padding-left: 0
+        &:last-child
+          margin-bottom: 0 !important
+      &.empty
+        background-color: #fafafa
+        display: flex
+        align-items: center
+        flex-direction: column
+        .svg
+          width: 64px
+          height: 64px
+          margin-bottom: 16px
+        p
+          font-size: 14px
+          color: #545454
+          max-width: 412px
+          text-align: center

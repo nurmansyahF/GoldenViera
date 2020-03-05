@@ -39,7 +39,7 @@ html(lang="en")
           margin-bottom: 40px;
           display: flex;
         }
-        .new{
+        {
           position: relative;
         }
         .new:after{
@@ -72,7 +72,7 @@ html(lang="en")
         .page-list-link:hover {
           background: #efce57;
           color: #FFF;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.80);
           -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.80);
           box-shadow: 5px 40px -10px rgba(0,0,0,0.80);
@@ -87,19 +87,19 @@ html(lang="en")
         main
           .container
             .row.justify-content-center.page-list
-              .col-md-3.page-list-item.new
+              .col-md-3.page-list-item
                 a.page-list-link(href="home.html" target="_blank")
                   span Homepage
-              .col-md-3.page-list-item.new
+              .col-md-3.page-list-item
                 a.page-list-link(href="products.html" target="_blank")
                   span Products
               .col-md-3.page-list-item
                 a.page-list-link(href="products-single.html" target="_blank")
                   span Product Detail
-              .col-md-3.page-list-item.new
+              .col-md-3.page-list-item
                 a.page-list-link(href="about.html" target="_blank")
                   span About
-              .col-md-3.page-list-item.new
+              .col-md-3.page-list-item
                 a.page-list-link(href="contact.html" target="_blank")
                   span Contact Us
               .col-md-3.page-list-item
@@ -111,6 +111,12 @@ html(lang="en")
               .col-md-3.page-list-item
                 a.page-list-link(href="checkout.html" target="_blank")
                   span Checkout
+              .col-md-3.page-list-item.new
+                a.page-list-link(href="checkout-shipping.html" target="_blank")
+                  span Checkout Shipping
+              .col-md-3.page-list-item.new
+                a.page-list-link(href="checkout-payment.html" target="_blank")
+                  span Checkout Payment
               //- .col-md-3.page-list-item
               //-   a.page-list-link(href="#" target="_blank")
               //-     span 404 not found

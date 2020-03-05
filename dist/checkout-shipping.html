@@ -24,64 +24,38 @@
                     <div class="breadcrumb">
                       <ul>
                         <li><a href="cart.html">Cart</a><img class="svg" src="images/chevron-down-solid.svg"/></li>
-                        <li><span>Information</span><img class="svg" src="images/chevron-down-solid.svg"/></li>
-                        <li><a href="checkout-shipping.html">Shipping</a><img class="svg" src="images/chevron-down-solid.svg"/></li>
+                        <li><a href="checkout.html">Information</a><img class="svg" src="images/chevron-down-solid.svg"/></li>
+                        <li><span>Shipping</span><img class="svg" src="images/chevron-down-solid.svg"/></li>
                         <li><a href="checkout-payment.html#">Payment</a></li>
                       </ul>
                     </div>
-                    <div class="form-checkout">
-                      <form action="checkout-shipping.html">
-                        <div class="form-group">
-                          <div class="fg-heading">
-                            <label>Contact Inforamtion</label>
-                            <p>Alredy have an account ?<a href="#"> Log in</a></p>
-                          </div><span class="floating-label">Email or mobile phone number</span>
-                          <input class="form-control" type="email" placeholder="Email or mobile phone number"/>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="keepMe" type="checkbox" name="keep-me"/>
-                            <label class="custom-control-label" for="#keepMe">	Keep me up to date on news and exclusive offers</label>
+                    <div class="checkout-shipping">
+                      <div class="form-checkout">
+                        <div class="box-cs">
+                          <div class="bcs-item"><span>Contact</span>
+                            <p>email@email.com</p><a href="checkout.html">Change</a>
+                          </div>
+                          <div class="bcs-item"><span>Ship to</span>
+                            <p>72 South First Parkway, Cumque ut in autem v, 79169 Quam commodi qui pra , Eritrea</p><a href="checkout.html">Change</a>
                           </div>
                         </div>
-                        <label>Shipping address</label>
-                        <div class="form-group">
-                          <div class="row">
-                            <div class="col-sm-6"><span class="floating-label">First name(optional)</span>
-                              <input class="form-control" type="text" placeholder="First name(optional)"/>
+                        <h4>Shipping address</h4>
+                        <div class="box-shippm">
+                          <div class="shippm-item">
+                            <div class="custom-control custom-radio">
+                              <input class="custom-control-input" id="customControlValidation2" type="radio" name="radio-stacked" required="" checked="checked"/>
+                              <label class="custom-control-label" for="customControlValidation2">Standard<span class="price">$ 0.3</span></label>
                             </div>
-                            <div class="col-sm-6"><span class="floating-label">Last name</span>
-                              <input class="form-control" type="text" placeholder="Last name"/>
+                            <div class="custom-control custom-radio mb-3">
+                              <input class="custom-control-input" id="customControlValidation3" type="radio" name="radio-stacked" required=""/>
+                              <label class="custom-control-label" for="customControlValidation3">Express<span class="price">$ 0.8</span></label>
                             </div>
-                          </div>
-                        </div>
-                        <div class="form-group"><span class="floating-label">Address</span>
-                          <input class="form-control" type="text" placeholder="Address"/>
-                        </div>
-                        <div class="form-group"><span class="floating-label">Apartement, suite, etc. (optional)</span>
-                          <input class="form-control" type="text" placeholder="apartement, suite, etc"/>
-                        </div>
-                        <div class="form-group"><span class="floating-label">City</span>
-                          <input class="form-control" type="text" placeholder="City"/>
-                          <div class="row">
-                            <div class="col-sm-6"><span class="floating-label">Country/Region</span>
-                              <select class="form-control" id="country">
-                                <option value="Indonesia" select="select">Indonesia</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Singapore">Singapore</option>
-                              </select>
-                            </div>
-                            <div class="col-sm-6"><span class="floating-label">Postal Code</span>
-                              <input class="form-control" type="text" placeholder="Postal code"/>
-                            </div>
-                          </div>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="saveInfo" type="checkbox" name="saveInfo"/>
-                            <label class="custom-control-label" for="#saveInfo">	Save this information for next time</label>
                           </div>
                         </div>
                         <div class="form-action"><a class="btn btn-link" href="cart.html">< Return to cart</a>
-                          <input class="btn btn-primary" type="submit" value="Continue to shipping"/>
+                          <input class="btn btn-primary" type="submit" value="Continue to payment"/>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>

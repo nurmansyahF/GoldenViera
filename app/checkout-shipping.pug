@@ -1,0 +1,88 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "checkout";
+
+block header
+
+block content
+  .checkout.animate.fade-scale
+    .container
+      .row
+        .col-md-7
+          .checkout-l
+            .checkout-header
+              a.header-logo(href="home.html")
+                img(src="images/logo-golden-viera.png")
+              .breadcrumb
+                ul
+                  li
+                    a(href="cart.html") Cart
+                    img.svg(src='images/chevron-down-solid.svg')
+                  li
+                    a(href="checkout.html") Information
+                    img.svg(src='images/chevron-down-solid.svg')
+                  li
+                    span Shipping
+                    img.svg(src='images/chevron-down-solid.svg')
+                  li
+                    a(href="checkout-payment.html#") Payment
+              
+              .checkout-shipping
+                .form-checkout
+                  .box-cs
+                    .bcs-item
+                      span Contact
+                      p email@email.com
+                      a(href="checkout.html") Change
+                    .bcs-item
+                      span Ship to
+                      p 72 South First Parkway, Cumque ut in autem v, 79169 Quam commodi qui pra , Eritrea
+                      a(href="checkout.html") Change
+
+                  h4 Shipping address
+                  .box-shippm
+                    .shippm-item
+                      .custom-control.custom-radio
+                        input#customControlValidation2.custom-control-input(type='radio' name='radio-stacked' required='' checked)
+                        label.custom-control-label(for='customControlValidation2') Standard
+                          span.price $ 0.3
+                      .custom-control.custom-radio.mb-3
+                        input#customControlValidation3.custom-control-input(type='radio' name='radio-stacked' required='')
+                        label.custom-control-label(for='customControlValidation3') Express
+                          span.price $ 0.8
+                  .form-action
+                    a.btn.btn-link(href="cart.html") < Return to cart
+                    input.btn.btn-primary(type="submit" value="Continue to payment")
+
+
+        .col-md-5
+          .checkout-r
+            .checkout-product-summary
+              .checkout-ps-item
+                .img-box(style="background-image: url(images/img-product-01.jpg)")
+                .text-box
+                  h4 Product 1
+                  span.detdesc S/Black
+                span.price $ 10.0
+              .checkout-voucher
+                form.form-inline
+                  .form-group
+                    input.form-control(placeholder="Discount code")
+                  button.btn.btn-grey.disabled Apply
+              .checkout-subtotal
+                ul
+                  li
+                    span Subtotal
+                    span $100.00
+                  li
+                    span Shipping
+                    span $0.3
+                  li.total-final
+                    span Total
+                    span
+                      small USD
+                      |  $739.00
+
+
+block footer

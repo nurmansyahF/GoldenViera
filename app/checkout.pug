@@ -17,7 +17,7 @@ block content
               .breadcrumb
                 ul
                   li
-                    a(href="chart.html") Cart
+                    a(href="cart.html") Cart
                     img.svg(src='images/chevron-down-solid.svg')
                   li
                     span Information
@@ -28,7 +28,7 @@ block content
                   li
                     a(href="checkout-payment.html#") Payment
               .form-checkout
-                form(action="")
+                form(action="checkout-shipping.html")
                   .form-group
                     .fg-heading
                       label Contact Inforamtion
@@ -88,7 +88,7 @@ block content
                 form.form-inline
                   .form-group
                     input.form-control(placeholder="Discount code")
-                  button.btn.btn-grey Apply
+                  button.btn.btn-grey.disabled Apply
               .checkout-subtotal
                 ul
                   li
