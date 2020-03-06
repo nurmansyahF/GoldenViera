@@ -204,6 +204,7 @@
     margin: 0 0 15px
 
   +maxtablet
+    padding: 45px 0
     .col-lg-4
       display: flex
       .item
@@ -264,6 +265,8 @@
 
 .home-product-slider
   padding: 90px 0
+  +maxtablet
+    padding: 45px 0
 
 .owl-carousel
   .owl-nav
@@ -1088,6 +1091,119 @@
             text-decoration: none
             &:hover
               color: $secondary
+  .icon-menu
+    position: absolute
+    top: 30px
+    left: 100%
+    width: 40px
+    height: 40px
+    background-color: #efefef
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    border-radius: 0 6px 6px 0
+    display: none
+    z-index: 3
+    .svg
+      width: 20px
+      height: 20px
+      transform: rotate(-90deg)
+
+  +maxtablet
+    overflow: hidden
+    &-wrapper
+      position: relative
+    .col-lg-3
+      transition: all .3s ease
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      padding-top: 40px
+      background-color: #FFF
+      transform: translateX(-100%)
+      z-index: 30
+      flex: 0 0 33.3333%
+      max-width: 33.3333%
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.07)
+    .col-lg-9
+      transition: all .3s ease
+      flex: 0 0 100%
+      max-width: 100% 
+    .icon-menu
+      display: flex
+  +mobile
+    .filter-prdct
+      flex-direction: column
+      .col
+        flex: 0 0 100%
+        max-width: 100%
+      .view
+        order: 1
+      .show-sort
+        order: 0
+        margin-left: 0
+    &-single-wrap
+      .details
+        margin-left: 0
+        dl
+          dd
+            padding-left: 100px
+        .pd-action
+          .btn:not(.btn-block)
+            width: 100%
+    .products-wrapper
+      .side-filter
+        .sec-filter
+          &:last-child
+            display: none
+    .tab-custom
+      margin-top: 40px
+      .nav-tabs
+        margin-left: 0
+        display: flex
+        li
+          max-width: 39.1%
+          text-align: center
+          width: calc((100% / 3) + 15px)
+          a
+            font-size: 13px
+            line-height: 1em
+            padding: 10px
+            min-height: 48px
+      .tab-pane
+        padding: 20px 15px
+  +responsive(340px)
+    .tab-custom
+      .nav-tabs
+        display: flex
+        li
+          width: calc((100% / 3) + 15px)
+          a
+            font-size: 12px
+            min-height: 45px
+            &.active
+              z-index: 3
+      
+
+
+
+
+.side-filter-open
+  .products
+    &-wrapper
+      .col-lg-3
+        transform: translateX(0)
+    .icon-menu
+      .svg
+        transform: rotate(90deg)
+  +mobile
+    .products
+      &-wrapper
+        .col-lg-3
+          flex: 0 0 90%
+          max-width: 90%
 
 
 .related,
@@ -1483,12 +1599,28 @@
     line-height: 1.1em
     font-weight: 700
 
+  +maxtablet
+    .btn.btn-primary
+      font-size: 13px
+  +mobile
+    &-order-summary
+      margin-top: 50px
+  +responsive(340px)
+    &-item-action
+      flex-direction: column
+      .btn
+        margin-bottom: 20px
+
+
 
 // Checkout
 
 .checkout
   margin-top: -100px
   position: relative
+  min-height: 100vh
+  display: flex
+  align-items: flex-start
   &:after
     content: ""
     width: 46%
@@ -1498,15 +1630,16 @@
     position: absolute
     top: 0
     right: 0
+    // display: none
   &-r,
   &-l
     padding-top: 4em
     position: relative
     z-index: 3
   &-l
-    padding-right: 6%
+    padding-right: 70px
   &-r
-    padding-left: 6%
+    padding-left: 12px
   .header-logo
     img
   label
@@ -1598,7 +1731,6 @@
     text-transform: capitalize
     &:hover
       color: $secondary
-
 
   &-product-summary
   &-ps-item
@@ -1753,3 +1885,101 @@
           color: #545454
           max-width: 412px
           text-align: center
+
+  +responsive(1500px)
+    &-l,
+    &-r
+      padding-top: 2em
+  +maxtablet
+    &-l
+      padding-right: 40px
+    &-r
+      padding-left: 0
+    &:after
+      width: 44.5%
+
+  +mobile
+    .breadcrumb
+      ul
+        li
+          a
+            font-size: 0.65714em
+    &-shipping
+      .bcs-item
+        flex-wrap: wrap
+        a,
+        span
+          flex: 0 0 50%
+          max-width: 50%
+          display: inline-block
+          margin-bottom: 10px
+        span
+          order: 0
+        a
+          order: 1
+          text-align: right
+        p
+          order: 2
+          flex: 0 0 100%
+          max-width: 100%
+    .container
+      position: relative
+    &-header
+      text-align: center
+    .fg-heading
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      p
+        order: 0
+        margin-bottom: 10px
+      label
+        order: 1
+    .header-logo
+      display: inline-block
+      margin: 0 auto
+    &-l
+      padding-right: 0
+      position: inherit
+      .form-group
+        .col-sm-6
+          margin-bottom: 15px
+      .form-action
+        width: calc(100% - 30px)
+        position: fixed
+        bottom: 0
+        left: 0
+        right: 0
+        margin: 0 auto 15px
+        z-index: 40
+        .btn
+          font-size: 13px !important
+          &.btn-primary
+            min-width: 100px
+    &-r
+      padding-left: 0
+      padding-top: 0
+      margin-top: 40px
+      padding: 40px 0 100px
+      position: relative
+      z-index: 1
+      &:after
+        content: ""
+        position: absolute
+        display: block
+        width: calc(100% + 30px)
+        border-left: 0
+        height: 100%
+        bottom: 0
+        left: -15px
+        z-index: -1
+        background-color: #fafafa
+        border-top: 1px solid $border
+    &:after
+      display: none
+  +responsive(340px)
+    &-l
+      .form-action
+        .btn.btn-primary
+          padding: 8px
+

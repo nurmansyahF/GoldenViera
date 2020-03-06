@@ -138,6 +138,14 @@
         })
       })
 
+      $('.icon-menu').each(function(){
+        var t = $(this);
+        t.click(function(){
+          $('body').removeClass('.menu-open');
+          $('body').toggleClass('side-filter-open');
+        })
+      })
+
       //SLIDER
       $('.slider').each(function(){
         var t = $(this),
@@ -479,6 +487,10 @@
         init();
         animateScroll();
     })
+    $(window).resize(function() {
+      init();
+      animateScroll();
+    });
 
 
 })();

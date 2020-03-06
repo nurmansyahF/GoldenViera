@@ -231,6 +231,7 @@ main
       line-height: normal;
       border: none
       outline: none !important
+      width: 100%
       max-width: calc(100% - 90px)
       &::-webkit-input-placeholder
         color: $text
@@ -246,6 +247,39 @@ main
   &.show
     .modal-dialog
       transform: translate(0, 0);
+  +maxtablet
+    .close
+      right: -70px
+    .modal-lg
+      max-width: 80%
+    .search-form
+      .form-control
+        font-size: 55px
+        max-width: calc(100% - 65px)
+      button
+        width: 60px
+        height: 60px
+        .svg
+          width: 50px
+          height: 50px
+  +mobile
+    .close
+      top: 20px
+      right: 0
+    .modal-lg
+      max-width: 90%
+      margin: 0 auto
+    .search-form
+      .form-control
+        font-size: 36px
+        max-width: calc(100% - 50px)
+      button
+        width: 41px
+        height: 41px
+        .svg
+          width: 30px
+          height: 30px
+
 
 body.backdrop-white
   .modal-backdrop
@@ -379,7 +413,36 @@ body.backdrop-white
           width: calc(50% - 10px)
   +responsive(1500px)
     .modal-lg
-      max-width: 80%       
+      max-width: 80%
+  +maxtablet
+    .box-img
+      margin-bottom: 40px
+  +tablet
+    .col-md-6
+      flex: 0 0 100%
+      max-width: 100%
+    .box-img
+      .img
+        &:before
+          padding: 38.8% 0
+    .details
+      .pd-action
+        .btn:not(.btn-block)
+          width: 100%
+  +mobile
+    .modal-lg
+      max-width: 95%
+      margin: auto
+    .details
+      margin-left: 0
+      .pd-action
+        .btn:not(.btn-block)
+          width: 100%
+      dl
+        dd
+          padding-left: 110px
+
+
 .qty
   display: flex !important
   max-width: 130px

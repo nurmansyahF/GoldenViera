@@ -51,10 +51,23 @@
     padding: 20px 0
     font-size: 16px
     line-height: 1.7em
+  +maxtablet
+    .col-md-3
+      flex: 0 0 33.333333%
+      max-width: 33.333333%
+      &:first-child
+        flex: 0 0 100%
+        max-width: 100%
+        flex-wrap: wrap
+        display: flex
+        justify-content: center
+
+        p
+          margin-bottom: 30px
+
 
   +mobile
-    .footer
-      padding: 60px 0
+    padding: 60px 0
     .footer-logo
       text-align: center
       img
@@ -62,5 +75,8 @@
     .footer-menu
       p
         margin-bottom: 20px
+    .col-md-3
+      flex: 0 0 100%
+      max-width: 100%
     .socmed
       margin-top: 40px

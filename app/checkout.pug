@@ -27,52 +27,52 @@ block content
                     img.svg(src='images/chevron-down-solid.svg')
                   li
                     a(href="checkout-payment.html#") Payment
-              .form-checkout
-                form(action="checkout-shipping.html")
-                  .form-group
-                    .fg-heading
-                      label Contact Inforamtion
-                      p Alredy have an account ?
-                        a(href="#")  Log in
-                    span.floating-label Email or mobile phone number
-                    input.form-control(type="email" placeholder="Email or mobile phone number")
-                    .custom-control.custom-checkbox
-                      input.custom-control-input#keepMe(type="checkbox" name="keep-me")
-                      label.custom-control-label(for="#keepMe") 	Keep me up to date on news and exclusive offers
-                  label Shipping address
-                  .form-group
-                    .row
-                      .col-sm-6
-                        span.floating-label First name(optional)
-                        input.form-control(type="text" placeholder="First name(optional)")
-                      .col-sm-6
-                        span.floating-label Last name
-                        input.form-control(type="text" placeholder="Last name")
-                  .form-group
-                    span.floating-label Address
-                    input.form-control(type="text" placeholder="Address")
-                  .form-group
-                    span.floating-label Apartement, suite, etc. (optional)
-                    input.form-control(type="text" placeholder="apartement, suite, etc")
-                  .form-group
-                    span.floating-label City
-                    input.form-control(type="text" placeholder="City")
-                    .row
-                      .col-sm-6
-                        span.floating-label Country/Region
-                        select#country.form-control
-                          option(value="Indonesia" select) Indonesia
-                          option(value="Malaysia") Malaysia
-                          option(value="Singapore") Singapore
-                      .col-sm-6
-                        span.floating-label Postal Code
-                        input.form-control(type="text" placeholder="Postal code")
-                    .custom-control.custom-checkbox
-                      input.custom-control-input#saveInfo(type="checkbox" name="saveInfo")
-                      label.custom-control-label(for="#saveInfo") 	Save this information for next time
-                  .form-action
-                    a.btn.btn-link(href="cart.html") < Return to cart
-                    input.btn.btn-primary(type="submit" value="Continue to shipping")
+            .form-checkout
+              form(action="checkout-shipping.html")
+                .form-group
+                  .fg-heading
+                    label Contact Inforamtion
+                    p Alredy have an account ?
+                      a(href="#")  Log in
+                  span.floating-label Email or mobile phone number
+                  input.form-control(type="email" placeholder="Email or mobile phone number")
+                  .custom-control.custom-checkbox
+                    input.custom-control-input#keepMe(type="checkbox" name="keep-me")
+                    label.custom-control-label(for="#keepMe") 	Keep me up to date on news and exclusive offers
+                label Shipping address
+                .form-group
+                  .row
+                    .col-sm-6
+                      span.floating-label First name(optional)
+                      input.form-control(type="text" placeholder="First name(optional)")
+                    .col-sm-6
+                      span.floating-label Last name
+                      input.form-control(type="text" placeholder="Last name")
+                .form-group
+                  span.floating-label Address
+                  input.form-control(type="text" placeholder="Address")
+                .form-group
+                  span.floating-label Apartement, suite, etc. (optional)
+                  input.form-control(type="text" placeholder="apartement, suite, etc")
+                .form-group
+                  span.floating-label City
+                  input.form-control(type="text" placeholder="City")
+                  .row
+                    .col-sm-6
+                      span.floating-label Country/Region
+                      select#country.form-control
+                        option(value="Indonesia" select) Indonesia
+                        option(value="Malaysia") Malaysia
+                        option(value="Singapore") Singapore
+                    .col-sm-6
+                      span.floating-label Postal Code
+                      input.form-control(type="text" placeholder="Postal code")
+                  .custom-control.custom-checkbox
+                    input.custom-control-input#saveInfo(type="checkbox" name="saveInfo")
+                    label.custom-control-label(for="#saveInfo") 	Save this information for next time
+                .form-action
+                  a.btn.btn-link(href="cart.html") < Return to cart
+                  input.btn.btn-primary(type="submit" value="Continue to shipping")
 
 
         .col-md-5

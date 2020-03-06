@@ -1022,7 +1022,15 @@ block modalLocal
                 dt
                   label Quantity:
                 dd
-                  p asdf
+                  .form-group.qty
+                    a.btn-number.min(href="#" data-type="minus" data-field="quant[1]")
+                      i
+                        img.svg(src="images/minus-solid.svg")
+                    input.type-hidden(type="hidden" name="size" value="300")
+                    input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="0" max="20")
+                    a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]")
+                      i
+                        img.svg(src="images/plus-solid.svg")
                 dt
                   label Subtotal:
                 dd
