@@ -1,0 +1,78 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "news";
+
+block content
+  .products
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 THE FOUNDATION TO INCREASE YOUR FACE VALUE!
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              a(href='news-list.html') News
+            li
+              span  The foundation to increase your face value!
+    .products-wrapper
+      .container
+        .row.justify-content-center
+          .col-lg-9
+            .newss-list.news-single.row
+              .col-md-12
+                .news-list-item
+                  .box-img
+                    .img(style="background-image: url(images/FPK-2018090628.jpg);")
+
+                  .box-text
+                    .date-auth
+                      span
+                        i
+                          img.svg(src="images/calendar-regular.svg") 
+                        | 20 Feb 2020
+                      a(href="#")
+                        i
+                          img.svg(src="images/comment-dots-regular.svg") 
+                        | 0 Comments
+
+                      a(href="#")
+                        i
+                          img.svg(src="images/user-regular.svg") 
+                        | Auth Name
+                    h4 The foundation to increase your face value!
+                  .desc
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+
+                  .tag-category
+                    i
+                      img.svg(src="images/tag-solid.svg")
+                    a(href="news-list.html") Cosmetics
+                    a(href="news-list.html") Makeup
+                  .share
+                    span Share this on: 
+                    a.icon-twitter(href="https://twitter.com/" target="_blank")
+                    a.icon-facebook(href="https://www.facebook.com/" target="_blank")
+                    a.icon-instagram(href="https://www.instagram.com/" target="_blank")
+
+                  .leave-comment
+                    .contact-form.animate.fade-inb
+                      h3 Leave Comment
+                      form(action="")
+                        .row
+                          .col-md-6
+                            .form-group
+                              input.form-control(type="text" placeholder="Name")
+                          .col-md-6
+                            .form-group
+                              input.form-control(type="text" placeholder="Email")
+                        .form-group
+                          textarea.form-control(placeholder="Message" rows="7")
+                        p Please note, comments must be approved before they are published
+                        .form-action
+                          button.btn.btn-primary(type="submit") Post Comment
+
+                  
+
+              

@@ -1,0 +1,251 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "news";
+
+block content
+  .products
+    .banner-small(style="background-image: url(images/FPK-2018091546.jpg)")
+      .container-big
+        .title-breadcrumbs
+          h1 News
+          ul.breadcrumbs
+            li
+              a(href='home.html') Home
+            li
+              span News
+    .products-wrapper
+      .container
+        .row
+          .col-lg-3
+            .side-filter
+              a.icon-menu
+                i
+                  img.svg(src="images/chevron-down-solid.svg")
+
+              .sec-filter.animate.fade-inb.delay
+                h4 Recent Articels
+                .item-news
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .box-text
+                    h5 
+                      a(href="news-single.html") The foundation to increase your face value!
+                    p Lorem ipsum dolor sit amet,...
+
+                .item-news
+                  .box-img
+                    .img(style="background-image: url(images/FPK-2018091818.jpg);")
+                  .box-text
+                    h5 
+                      a(href="news-single.html") The foundation to increase your face value!
+                    p Lorem ipsum dolor sit amet,...
+
+                .item-news
+                  .box-img
+                    .img(style="background-image: url(images/img-product-01.jpg);")
+                  .box-text
+                    h5 
+                      a(href="news-single.html") The foundation to increase your face value!
+                    p Lorem ipsum dolor sit amet,...
+
+
+              
+              .sec-filter.filter-ec.animate.fade-inb.delay.mb-30
+                h4 Category
+                ul.ec-wrapper#ec-filter
+                  li
+                    a(href="#") Beauty
+                  li
+                    a(href="#") Cosmetic
+                  li
+                    a(href="#") Makeup
+              
+              .sec-filter.animate.fade-inb.delay
+                h4 Best Seller
+                .best-seller
+                  .item-prdct
+                    a(href="#")
+                      span.tag-sale Sale
+                      .box-img
+                        .img(style="background-image: url(images/img-product-01.jpg);")
+                      .desc
+                        .star.stared-5
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                          i
+                            img.svg(src="images/star-solid.svg")
+                        .name
+                          h3 Lorem Ipsuem
+                        .price $389.00
+
+
+          .col-lg-9
+            .newss-list.row
+              .col-md-6
+                .news-list-item
+                  .box-img
+                    a(href="news-single.html")
+                      .img(style="background-image: url(images/FPK-2018090628.jpg);")
+
+                  .box-text
+                    .date-auth
+                      span
+                        i
+                          img.svg(src="images/calendar-regular.svg") 
+                        | 20 Feb 2020
+                      a(href="#")
+                        i
+                          img.svg(src="images/comment-dots-regular.svg") 
+                        | 0 Comments
+
+                      a(href="#")
+                        i
+                          img.svg(src="images/user-regular.svg") 
+                        | Auth Name
+                    h4
+                      a(href="news-single.html") The foundation to increase your face value!
+                    .desc
+                      p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ...
+                    a.btn.btn-primary(href="news-single.html") Read More
+
+              .col-md-6
+                .news-list-item
+                  .box-img
+                    a(href="news-single.html")
+                      .img(style="background-image: url(images/FPK-2018091818.jpg);")
+
+                  .box-text
+                    .date-auth
+                      span
+                        i
+                          img.svg(src="images/calendar-regular.svg") 
+                        | 20 Feb 2020
+                      a(href="#")
+                        i
+                          img.svg(src="images/comment-dots-regular.svg") 
+                        | 0 Comments
+
+                      a(href="#")
+                        i
+                          img.svg(src="images/user-regular.svg") 
+                        | Auth Name
+                    h4
+                      a(href="news-single.html") The foundation to increase your face value!
+                    .desc
+                      p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ...
+                    a.btn.btn-primary(href="news-single.html") Read More
+
+              .col-md-6
+                .news-list-item
+                  .box-img
+                    a(href="news-single.html")
+                      .img(style="background-image: url(images/FPK-2018091818.jpg);")
+
+                  .box-text
+                    .date-auth
+                      span
+                        i
+                          img.svg(src="images/calendar-regular.svg") 
+                        | 20 Feb 2020
+                      a(href="#")
+                        i
+                          img.svg(src="images/comment-dots-regular.svg") 
+                        | 0 Comments
+
+                      a(href="#")
+                        i
+                          img.svg(src="images/user-regular.svg") 
+                        | Auth Name
+                    h4
+                      a(href="news-single.html") The foundation to increase your face value!
+                    .desc
+                      p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ...
+                    a.btn.btn-primary(href="news-single.html") Read More
+
+              .col-md-6
+                .news-list-item
+                  .box-img
+                    a(href="news-single.html")
+                      .img(style="background-image: url(images/FPK-2018090628.jpg);")
+
+                  .box-text
+                    .date-auth
+                      span
+                        i
+                          img.svg(src="images/calendar-regular.svg") 
+                        | 20 Feb 2020
+                      a(href="#")
+                        i
+                          img.svg(src="images/comment-dots-regular.svg") 
+                        | 0 Comments
+
+                      a(href="#")
+                        i
+                          img.svg(src="images/user-regular.svg") 
+                        | Auth Name
+                    h4
+                      a(href="news-single.html") The foundation to increase your face value!
+                    .desc
+                      p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ...
+                    a.btn.btn-primary(href="news-single.html") Read More
+
+
+block modalLocal
+  #modalQv.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalSearch' aria-hidden='true')
+    .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+      .modal-content
+        a.close(href="#" data-dismiss="modal")
+          img.svg(src="images/times-solid.svg")
+        .row
+          .col-md-6
+            .box-img
+              .img(style="background-image: url(images/img-product-01.jpg);")
+          .col-md-6
+            .details
+              h2 Product 1
+              .desc
+                p Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper 
+              
+              dl
+                dt
+                  label Price:
+                dd
+                  .price
+                    span.now $300.00
+                    small.real $350.00
+                dt
+                  label Availability:
+                dd
+                  span In Stock
+                dt
+                  label Size:
+                dd
+                  .sizes
+                    a.active(href="#") L
+                    a(href="#") S
+                dt
+                  label Quantity:
+                dd
+                  .form-group.qty
+                    a.btn-number.min(href="#" data-type="minus" data-field="quant[1]")
+                      i
+                        img.svg(src="images/minus-solid.svg")
+                    input.type-hidden(type="hidden" name="size" value="300")
+                    input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="0" max="20")
+                    a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]")
+                      i
+                        img.svg(src="images/plus-solid.svg")
+                dt
+                  label Subtotal:
+                dd
+                  .price $600.00
+              .pd-action
+                button.btn
+                  span Add to chart

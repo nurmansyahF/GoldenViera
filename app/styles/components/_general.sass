@@ -49,6 +49,11 @@ main
   +maxtablet
     margin-top: 80px
 
+.mb-30
+  margin-bottom: 30px
+  +mobile
+    margin-bottom: 20px
+
 .item-prdct
   position: relative
   width: 100%
@@ -206,6 +211,146 @@ main
       i
         color: $primary
 
+
+//Item articels
+.item-news
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 15px
+  width: 100%
+  overflow-x: hidden
+  .box-img
+    width: 80px !important
+  .box-text
+    width: calc(100% - 100px)
+    margin-left: 20px
+    h5
+      font-size: 15px;
+      margin-bottom: 10px;
+      line-height: 1em
+      a
+        color: $text
+        &:hover
+          color: $secondary
+    p
+      font-size: 14px
+      line-height: 1em
+
+// List item news
+.news-list-item
+  margin-bottom: 30px
+  .date-auth
+    margin: 15px 0
+    display: flex
+    justify-content: space-around
+    align-items: center
+    font-size: 14px
+    flex-wrap: wrap
+    a,
+    span
+      display: inline-block
+      vertical-align: middle
+      color: $text
+      margin-right: 10px
+    a:hover
+      color: $secondary
+    .svg
+      width: 16px
+      height: 16px
+      margin-right: 10px
+  h4
+    font-size: 18px
+    margin-bottom: 15px
+    font-weight: 700
+    a
+      color: $text
+      &:hover
+        text-decoration: none
+        color: $secondary
+  .desc
+    margin-bottom: 15px
+
+  +mobile
+    .date-auth
+      align-items: flex-start
+      justify-content: flex-start
+      span,
+      a
+        margin-bottom: 8px
+
+.news-single
+  .date-auth
+    justify-content: flex-start
+    flex-wrap: wrap
+    a,
+    span
+      margin-right: 10px
+      margin-bottom: 8px
+      +mobile
+        flex: 0 0 46%
+        max-width: 50%
+  .desc
+    padding-bottom: 30px
+    border-bottom: 1px solid $border
+
+  .tag-category
+    margin: 15px 0
+    .svg
+      width: 16px
+      height: 16px
+      margin-right: 10px
+    a
+      color: $text
+      position: relative
+      &:after
+        content: ","
+        display: inline-block
+        margin: 0 3px
+      &:last-child
+        &:after
+          display: none
+  .share
+    margin-bottom: 15px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    border-bottom: 1px solid #FFF
+    color: $text
+    a
+      width: 15px
+      height: 15px
+      display: inline-block
+      margin: 15px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+
+    .icon
+      &-facebook
+        background-image: url(../images/ic-facebook-black.svg)
+      &-twitter
+        background-image: url(../images/ic-twitter-black.svg)
+      &-instagram
+        background-image: url(../images/ic-instagram-black.svg)
+
+  .leave-comment
+    .form-group,
+    .form-control
+      display: block
+      margin-right: 0
+    .form-action
+      text-align: left
+    textarea
+      margin-right: 0
+      width: 100%
+    .btn-primary
+      display: inline-block !important
+      width: auto !important
+    p
+      font-size: 14px
+    +mobile
+      .form-group
+        margin-right: 0
 
 //Modal search
 #modalSearch
