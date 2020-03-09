@@ -161,11 +161,11 @@
             margin: 24,
             center: true,
             navText: ["<span class='icon-chevron-left'></span>","<span class='icon-chevron-right'></span>"],
-            autoplay: false,
+            autoplay: true,
             autoplayTimeout: 8000,
             autoplaySpeed: 1200,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut'
+            // animateIn: 'fadeIn',
+            // animateOut: 'fadeOut'
           })
         }
       });
