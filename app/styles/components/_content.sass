@@ -470,7 +470,7 @@
       background-repeat: no-repeat
       &:before
         content: ""
-        padding: 58.8% 0
+        padding: 50.8% 0
         display: block
     &:before
       content: '';
@@ -490,7 +490,6 @@
   .box-text
     border: none
     padding: 20px
-    text-align: center
     h3
       margin: 0
       padding: 0
@@ -502,6 +501,8 @@
         width: 100%;
         padding: 0
         margin: 0
+    p
+      text-align: left
     .qtt
       span
         color: #030d1d;
@@ -517,6 +518,22 @@
           content: "-"
           display: inline-block
           margin-left: 5px
+  .reviewer
+    display: flex
+    align-items: center
+    margin: 15px 0
+    .box-img
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      overflow: hidden
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.07)
+      border: 1px solid $border
+      margin-right: 16px
+    .name
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 600
 
 .our-newsletter
   padding: 90px 0
@@ -1137,7 +1154,7 @@
     .col-lg-9
       transition: all .3s ease
       flex: 0 0 100%
-      max-width: 100% 
+      max-width: 100%
     .icon-menu
       display: flex
   +mobile
@@ -1192,7 +1209,7 @@
             min-height: 45px
             &.active
               z-index: 3
-      
+
 
 
 
@@ -1850,7 +1867,7 @@
 
       &.not-changed
         p
-         width: calc(100% - 90px) 
+         width: calc(100% - 90px)
     h4
       margin-bottom: 12px
 
